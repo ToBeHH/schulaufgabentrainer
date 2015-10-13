@@ -1,0 +1,19 @@
+.t { float: left; font-family:Arial,sans-serif; font-size: 1em; line-height: 1.8em; margin-right: 0px; width:140px;}
+
+@media print {
+  /* zusätzliche oder abweichende CSS-Regeln für Drucker */
+  
+  header, footer { display: none; }
+  
+  #content-wrap {
+    padding: 0;
+}
+.row {width: 100%; max-width: auto; }
+#content-wrap #main {
+    padding: 0;
+}
+.eight, .row .eight {
+    width: 100%;
+}
+  
+}
