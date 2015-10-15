@@ -1,5 +1,20 @@
 .t { float: left; font-family:Arial,sans-serif; font-size: 1em; line-height: 2.3em; margin-right: 0px; width:140px;}
 
+@font-face {
+    font-family: 'SAS1'; /*a name to be used later*/
+    src: url('../fonts/Bienchena.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'SAS2'; /*a name to be used later*/
+    src: url('../fonts/Bienchenb.ttf'); /*URL to font*/
+}
+
+.deutschTest { float: left; font-family:SAS1,Arial,sans-serif; font-size: 3em; line-height: 2.3em; margin-right: 0px; width:360px;
+	padding-top:5px;
+	margin-bottom: 17px; /* 22px-5px; */
+}
+
+
 @media print {
   /* zusätzliche oder abweichende CSS-Regeln für Drucker */
   
@@ -17,5 +32,5 @@
 }
 
 .t { width:159px;}
-  
+.deutschTest { width: 318px; }  
 }
