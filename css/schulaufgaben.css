@@ -1,4 +1,4 @@
-.t { float: left; font-family:Arial,sans-serif; font-size: 1em; line-height: 2.2em; margin-right: 0px; width:140px;}
+.t { float: left; font-family:Arial,sans-serif; font-size: 1em; line-height: 2.3em; margin-right: 0px; width:140px;}
 
 @media print {
   /* zusätzliche oder abweichende CSS-Regeln für Drucker */
@@ -15,5 +15,7 @@
 .eight, .row .eight {
     width: 100%;
 }
+
+.t { width:159px;}
   
 }
