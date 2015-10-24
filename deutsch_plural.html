@@ -428,7 +428,34 @@ for(var i=0; i < 27; i++) {
     var key = a;
   } while (already.indexOf(key) != -1);
 
-  document.write("<div class=\"deutschTest\">" + words[a] + "</div>");
+  document.write("<div class=\"deutschTest\"><i>[</i>\\");
+   var nextItalic = false;
+   for(var j=0; j < words[a].length; j++) {
+	    if (nextItalic) {
+			document.write("<i>" + words[a][j] + "</i>");
+			nextItalic = false;
+		} else {
+			document.write(words[a][j]);
+		}
+		if (words[a][j] == "A" || words[a][j] == "F" || words[a][j] == "H" || words[a][j] == "b" || words[a][j] == "o" || words[a][j] == "ö" || words[a][j] == "r" || words[a][j] == "v" || words[a][j] == "w" || words[a][j] == "x") {
+			nextItalic = true;
+		}
+		if ((words[a][j] == "b" || words[a][j] == "o" || words[a][j] == "r" || words[a][j] == "v" || words[a][j] == "w" || words[a][j] == "x") && 
+			((j+1) == words[a].length || words[a][j+1] == "u" || words[a][j+1] == "v" || words[a][j+1] == "w" || words[a][j+1] == "y")) {
+				document.write("<i>~</i>");
+		}
+		if ((words[a][j] == "s" || words[a][j] == "ß") && 
+			((j+1) != words[a].length && words[a][j+1] != " ")) {
+				document.write("§");
+		}
+		document.write("<i>_</i>");
+	}
+	for(var j=0; j < 100; j++) {
+		document.write("  <i>_</i>");
+	}
+	document.write("  <i>]</i>");
+	
+   document.write("</div>");
   already.push(key);
 }
 </script>					
@@ -465,6 +492,9 @@ for(var i=0; i < 27; i++) {
                <li><a href="index.html">Startseite</a></li>
 			   <li><a href="mathe_multi_1-100.html">Multiplikation Zahlenraum 1-100</a></li>
 			   <li><a href="mathe_divi_1-100.html">Division Zahlenraum 1-100</a></li>
+	           <li><a href="mathe_add_1-1000.html">Addition Zahlenraum 1-1.000</a></li>
+			   <li><a href="mathe_sub_1-1000.html">Subtraktion Zahlenraum 1-1.000</a></li>
+			   <li><a href="deutsch_plural.html">Deutsch Plural</a></li>	                     
 			   <li><a href="impressum.html">Impressum</a></li>
 			   <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
             </ul>

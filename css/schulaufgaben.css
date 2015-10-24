@@ -1,15 +1,22 @@
 .t { float: left; font-family:Arial,sans-serif; font-size: 1em; line-height: 2.3em; margin-right: 0px; width:140px;}
 
 @font-face {
-    font-family: 'SAS1'; /*a name to be used later*/
+    font-family: 'SAS'; /*a name to be used later*/
     src: url('../fonts/Bienchena.ttf'); /*URL to font*/
 }
 @font-face {
-    font-family: 'SAS2'; /*a name to be used later*/
+    font-family: 'SAS'; /*a name to be used later*/
     src: url('../fonts/Bienchenb.ttf'); /*URL to font*/
+    font-style: italic;
 }
 
-.deutschTest { float: left; font-family:SAS1,Arial,sans-serif; font-size: 3em; line-height: 1.5em; margin-right: 0px; width:360px;
+.deutschTest {
+	float: left; font-family:SAS,Arial,sans-serif; font-size: 3em; line-height: 1.5em; margin-right: 0px; width:360px; height: 60px;
+	overflow:hidden;
+}
+
+.deutschTest2 { float: left; font-family:SAS1,Arial,sans-serif; font-size: 3em; line-height: 1.5em; margin-right: 0px; width:360px;
+/* Background is not printed! */
     background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 65%, hsla(0,25%,50%,.5) 65%, hsla(0,0%,0%,0) 66%, hsla(0,0%,0%,0) 85%, hsla(0,25%,50%,.5) 86%, hsla(0,0%,0%,0) 87%);
     background-image:    -moz-linear-gradient(hsla(0,0%,0%,0) 65%, hsla(0,25%,50%,.5) 65%, hsla(0,0%,0%,0) 66%, hsla(0,0%,0%,0) 85%, hsla(0,25%,50%,.5) 86%, hsla(0,0%,0%,0) 87%);
     background-image:     -ms-linear-gradient(hsla(0,0%,0%,0) 65%, hsla(0,25%,50%,.5) 65%, hsla(0,0%,0%,0) 66%, hsla(0,0%,0%,0) 85%, hsla(0,25%,50%,.5) 86%, hsla(0,0%,0%,0) 87%);
