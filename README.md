@@ -7,6 +7,11 @@ sind hingegen relativ leicht automatisierbar. Und genau hier sollen diese Websei
 Sie erzeugen für bestimmte Themengebiete zufällig zusammengewürfelte Aufgaben, so dass man über lange Zeit jeden Tag üben kann - 
 und das jeden Tag anders. Die Seiten sind jeweils so gestaltet, dass sie sich gut auf ein DIN A4-Blatt ausdrucken lassen.
 
+# Wo finde ich die Seiten?
+Die Seiten sind über die GitHub Pages verfügbar:
+
+[https://tobehh.github.io/schulaufgabentrainer/index.html](https://tobehh.github.io/schulaufgabentrainer/index.html)
+
 # Lizenzen
 Das Projekt unter der bekannten Open Source [MIT Lizenz](LICENSE.md). 
 
