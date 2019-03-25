@@ -68,9 +68,9 @@
 	$(window).scroll(function() {
 
 		if ($(window).scrollTop() >= pxShow) {
-			$("#go-top").fadeIn(fadeInTime);
+			$("#go-top").show(fadeInTime);
 		} else {
-			$("#go-top").fadeOut(fadeOutTime);
+			$("#go-top").hide(fadeOutTime);
 		}
 
 	});  
