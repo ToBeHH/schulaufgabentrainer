@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+   <title>Schulaufgaben- Mathe-Test - Addition</title>
+   <meta name="description" content="">  
+   <meta name="author" content="Tobias Schulz-Hess">
+
+   <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/layout.css">  
+   <link rel="stylesheet" href="css/media-queries.css"> 
+   <link rel="stylesheet" href="css/schulaufgaben.css"> 
+
+   <!-- Script
+   ================================================== -->
+
+   <!-- Favicons
+   ================================================== -->
+   <link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="top">
+
+    <div class="row">
+
+      <div class="header-content twelve columns">
+
+          <h1 id="logo-text"><a href="index.html" title="">Schulaufgaben</a></h1>
+        <!-- p id="intro">Put your awesome slogan here...</p -->
+
+      </div>      
+
+     </div>
+
+     <nav id="nav-wrap"> 
+
+      <a class="mobile-btn" href="#nav-wrap" title="Zeige Menü">Zeige Menü</a>
+       <a class="mobile-btn" href="#" title="Verstecke Menü">Verstecke Menü</a>
+
+      <div class="row">                   
+
+          <ul id="nav" class="nav">
+              <li><a href="index.html">Startseite</a></li>
+              <li class="current has-children"><a href="#">Mathe</a>
+                    <ul>
+                       <li><a href="mathe_multi_1-100.html">Multiplikation Zahlenraum 1-100</a></li>
+                       <li><a href="mathe_divi_1-100.html">Division Zahlenraum 1-100</a></li>
+                       <li><a href="mathe_add.html?max=1000">Addition Zahlenraum 1-1.000</a></li>
+                       <li><a href="mathe_sub_1-1000.html">Subtraktion Zahlenraum 1-1.000</a></li>
+                    </ul>
+                 </li>
+              <li class="has-children"><a href="#">Deutsch</a>
+                    <ul>
+                       <li><a href="deutsch_plural.html">Plural</a></li>
+                    </ul>
+                  </li>
+          </ul> <!-- end #nav -->          
+
+      </div> 
+
+     </nav> <!-- end #nav-wrap -->       
+
+   </header> <!-- Header End -->
+
+   <!-- Content
+   ================================================== -->
+ <div id="content-wrap">
+
+    <div class="row">
+
+      <div id="main" class="eight columns">
+
+        <section class="page">          
+
+          <h2 class="entry-title">
+              Addition Zahlenraum 1-<span id="max"></span>
+          </h2>
+
+          <p><b>Aufgabe:</b> Addiere die beiden Zahlen zusammen.</p>
+          <div id="content" class="group">
+          </div>      
+
+          <h2 class="entry-title" style="margin-top:70px">
+              Subtraktion Zahlenraum 1-<span id="max2"></span>
+          </h2>
+
+          <p><b>Aufgabe:</b> Subtrahiere die beiden Zahlen voneinander.</p>
+          <div id="content2">
+          </div>  
+
+        </section> <!-- End page -->
+
+      </div> <!-- End main -->
+
+
+    </div> <!-- end row -->
+
+   </div> <!-- end content-wrap -->
+
+
+   <!-- Footer
+   ================================================== -->
+   <footer>
+
+      <div class="row"> 
+
+         <div class="three columns info">
+
+            <h3>Schulaufgaben</h3> 
+
+            <p>Individualisierte Aufgaben 
+            </p>
+
+         </div>
+
+         <div class="five columns">
+            <h3 class="social">Navigate</h3>
+
+            <ul class="navigate group">
+              <li><a href="index.html">Startseite</a></li>
+              <li><a href="mathe_multi_1-100.html">Multiplikation Zahlenraum 1-100</a></li>
+              <li><a href="mathe_divi_1-100.html">Division Zahlenraum 1-100</a></li>
+              <li><a href="mathe_add.html?max=1000">Addition Zahlenraum 1-1.000</a></li>
+              <li><a href="mathe_sub_1-1000.html">Subtraktion Zahlenraum 1-1.000</a></li>
+              <li><a href="deutsch_plural.html">Deutsch Plural</a></li>                      
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+            </ul>
+         </div>
+
+         <p class="copyright">This project is licensed under the <a href="https://github.com/ToBeHH/schulaufgabentrainer/blob/master/LICENSE.md">MIT license</a>. <a href="https://github.com/ToBeHH/schulaufgabentrainer">Feel free to contribute!</a> &nbsp; Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>.</p>
+        
+      </div> <!-- End row -->
+
+      <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+   </footer> <!-- End Footer-->
+
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E" crossorigin="anonymous"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.slim.min.js"><\/script>')</script>
+   <script src="js/main.js"></script>
+<script type="text/javascript">
+  
+
+var already = new Array();
+var maxStr = getParameterByName("max");
+var max = 1000;
+var howmuch = 100;
+var iFormat = new Intl.NumberFormat('de-DE');
+if (maxStr !== null) {
+  max = parseInt(maxStr,10);
+  howmuch = Math.min(max, 100);
+}
+$("#max").html(iFormat.format(max));
+
+for(var i=0; i < howmuch; i++) {
+  do {
+    var a = Math.floor(Math.random() * max)+1; 
+    var b = Math.floor(Math.random() * (max - a))+1; 
+    var key = a + "-" + b;
+  } while (already.indexOf(key) !== -1);
+
+  $("#content").append("<div class=\"t\">" + iFormat.format(a) + " + " + iFormat.format(b) + " = _____ </div>");
+  already.push(key);
+}
+
+already = new Array();
+$("#max2").html(iFormat.format(max));
+
+for(var i=0; i < howmuch; i++) {
+  do {
+    var a = Math.floor(Math.random() * max * 0.9)+(max*0.1); 
+    var b = Math.floor(Math.random() * (a - (max * 0.01)))+1; 
+    var key = a + "-" + b;
+    if (a === b) {
+      already.push(key);
+    }
+  } while (already.indexOf(key) !== -1);
+
+  $("#content2").append("<div class=\"t\">" + iFormat.format(a) + " - " + iFormat.format(b) + " = _____ </div>");
+  already.push(key);
+}
+
+</script>   
+</body>
+
+</html>

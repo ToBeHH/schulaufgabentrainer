@@ -25,7 +25,7 @@
 
   	toggle_button.on("click", function(e) {
    	e.preventDefault();
-    	nav.slideToggle("fast");     
+    	nav.show();     
   	});
 
   	if (toggle_button.is(':visible')) nav.addClass('mobile');
@@ -35,10 +35,8 @@
   	});
 
   	$('ul#nav li a').on("click", function(){      
-   	if (nav.hasClass('mobile')) nav.fadeOut('fast');      
+   	  if (nav.hasClass('mobile')) nav.hide();      
   	});	
-
-
 
   	
   	/*	Back To Top Button
@@ -58,3 +56,13 @@
 
 
 })(jQuery);
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}

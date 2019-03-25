@@ -8,23 +8,23 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-  <title>Schulaufgaben- Mathe-Test - Subtraktion</title>
-  <meta name="description" content="">  
-  <meta name="author" content="Tobias Schulz-Hess">
+   <title>Schulaufgaben- Mathe-Test - Subtraktion</title>
+   <meta name="description" content="">  
+   <meta name="author" content="Tobias Schulz-Hess">
 
    <!-- CSS
     ================================================== -->
    <link rel="stylesheet" href="css/default.css">
-  <link rel="stylesheet" href="css/layout.css">  
-  <link rel="stylesheet" href="css/media-queries.css"> 
-  <link rel="stylesheet" href="css/schulaufgaben.css"> 
+   <link rel="stylesheet" href="css/layout.css">  
+   <link rel="stylesheet" href="css/media-queries.css"> 
+   <link rel="stylesheet" href="css/schulaufgaben.css"> 
 
    <!-- Script
    ================================================== -->
 
    <!-- Favicons
-  ================================================== -->
-  <link rel="shortcut icon" href="favicon.png" >
+   ================================================== -->
+   <link rel="shortcut icon" href="favicon.png" >
 
 </head>
 
@@ -39,7 +39,6 @@
       <div class="header-content twelve columns">
 
           <h1 id="logo-text"><a href="index.html" title="">Schulaufgaben</a></h1>
-        <!-- p id="intro">Put your awesome slogan here...</p -->
 
       </div>      
 
@@ -58,8 +57,8 @@
                     <ul>
                        <li><a href="mathe_multi_1-100.html">Multiplikation Zahlenraum 1-100</a></li>
                        <li><a href="mathe_divi_1-100.html">Division Zahlenraum 1-100</a></li>
-                       <li><a href="mathe_add_1-1000.html">Addition Zahlenraum 1-1.000</a></li>
-                       <li><a href="mathe_sub_1-1000.html">Subtraktion Zahlenraum 1-1.000</a></li>
+                       <li><a href="mathe_add.html?max=1000">Addition Zahlenraum 1-1.000</a></li>
+                       <li><a href="mathe_sub.html?max=1000">Subtraktion Zahlenraum 1-1.000</a></li>
                     </ul>
                  </li>
               <li class="has-children"><a href="#">Deutsch</a>
@@ -86,32 +85,12 @@
         <section class="page">          
 
           <h2 class="entry-title">
-              Subtraktion Zahlenraum 1-1.000
+              Subtraktion Zahlenraum 1-<span id="max"></span>
           </h2>
 
-          <p><b>Aufgabe:</b> Dividiere die beiden Zahlen voneinander.</p>
-
-<script type="text/javascript">
-
-var already = new Array();
-
-for(var i=0; i < 100; i++) {
-  do {
-    var a = Math.floor(Math.random() * 900)+101; 
-    var b = Math.floor(Math.random() * (a - 10))+1; 
-    var key = a + "-" + b;
-    /*if (a < b) {
-      key = a + "-" + b;
-    } else {
-      key = b + "-" + a;
-    }*/
-  } while (already.indexOf(key) != -1);
-
-  document.write("<div class=\"t\">" + a + " - " + b + " = _____ </div>");
-  already.push(key);
-}
-
-</script>         
+          <p><b>Aufgabe:</b> Subtrahiere die beiden Zahlen voneinander.</p>
+          <div id="content">
+          </div>  
 
         </section> <!-- End page -->
 
@@ -145,8 +124,8 @@ for(var i=0; i < 100; i++) {
               <li><a href="index.html">Startseite</a></li>
               <li><a href="mathe_multi_1-100.html">Multiplikation Zahlenraum 1-100</a></li>
               <li><a href="mathe_divi_1-100.html">Division Zahlenraum 1-100</a></li>
-              <li><a href="mathe_add_1-1000.html">Addition Zahlenraum 1-1.000</a></li>
-              <li><a href="mathe_sub_1-1000.html">Subtraktion Zahlenraum 1-1.000</a></li>
+              <li><a href="mathe_add.html?max=1000">Addition Zahlenraum 1-1.000</a></li>
+              <li><a href="mathe_sub.html?max=1000">Subtraktion Zahlenraum 1-1.000</a></li>
               <li><a href="deutsch_plural.html">Deutsch Plural</a></li>                      
               <li><a href="impressum.html">Impressum</a></li>
               <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
@@ -167,6 +146,35 @@ for(var i=0; i < 100; i++) {
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E" crossorigin="anonymous"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.slim.min.js"><\/script>')</script>
    <script src="js/main.js"></script>
+
+<script type="text/javascript">
+
+var already = new Array();
+var maxStr = getParameterByName("max");
+var max = 1000;
+var howmuch = 100;
+var iFormat = new Intl.NumberFormat('de-DE');
+if (maxStr !== null) {
+  max = parseInt(maxStr,10);
+  howmuch = Math.min(max, 100);
+}
+$("#max").html(iFormat.format(max));
+
+for(var i=0; i < howmuch; i++) {
+  do {
+    var a = Math.floor(Math.random() * max * 0.9)+(max*0.1); 
+    var b = Math.floor(Math.random() * (a - (max * 0.01)))+1; 
+    var key = a + "-" + b;
+    if (a === b) {
+      already.push(key);
+    }
+  } while (already.indexOf(key) !== -1);
+
+  $("#content").append("<div class=\"t\">" + iFormat.format(a) + " - " + iFormat.format(b) + " = _____ </div>");
+  already.push(key);
+}
+
+</script>       
 </body>
 
 </html>
