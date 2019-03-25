@@ -693,7 +693,8 @@ footer .copyright {
 	bottom: 30px;
    right: 30px;  
    text-align: center; 
-   display: none;
+   opacity: 0;
+   transition: 0.4s;
 }
 #go-top a {
 	text-decoration: none;
