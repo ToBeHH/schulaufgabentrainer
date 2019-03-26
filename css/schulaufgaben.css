@@ -1,5 +1,36 @@
 .t { float: left; font-family:Arial,sans-serif; font-size: 1em; line-height: 2.3em; margin-right: 0px; width:140px;}
 
+.tImages {
+    border: 1px solid black;
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 47%;
+    text-align: center;
+}
+
+.tImages1 {
+    float: left;
+}
+
+.tImages2 {
+    float: right;
+}
+
+.tImages i {
+    margin: 0 10px;
+    font-size: 150%;
+}
+
+i.fa-separator {
+    margin-left: 0;
+    opacity: 0.5;
+}
+
+.tFull p {
+    margin-left: 62%;
+}
+
 @font-face {
     font-family: 'SAS'; /*a name to be used later*/
     src: url('../fonts/Bienchena.ttf'); /*URL to font*/
