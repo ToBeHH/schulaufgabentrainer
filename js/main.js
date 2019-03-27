@@ -118,10 +118,13 @@ var icons = [["crow", "dove"],
 	["tractor", "tractor fa-flip-horizontal"],
 	["truck", "truck fa-flip-horizontal"],
 	["walking", "walking fa-flip-horizontal"]];
+var colors = ["colorNavy", "colorBlue", "colorOlive", "colorGreen", "colorRed", "colorOrange", 
+	"colorPurple", "colorMaroon", "colorFuchsia", "colorBlack"];
 
 function subWithIcons(max, section, count) {
 	for (var i = 0; i < count; i++) {
 		var iconIndex = Math.floor(Math.random() * icons.length);
+		var colorIndex = Math.floor(Math.random() * colors.length);
 		var a = Math.floor(Math.random() * max * 0.9) + (max * 0.1);
 		do {
 			b = Math.floor(Math.random() * (a - (max * 0.01))) + 1;
@@ -140,8 +143,9 @@ function subWithIcons(max, section, count) {
 			classesB += "<i class=\"fas fa-" + icons[iconIndex][0] + "\"></i>"
 		}
 
-		$(section).append("<div class=\"tFull group\"><div class=\"tImages tImages1\">" + classesA + "</div>"
-			+ "<div class=\"tImages tImages2\">" + classesB + "</div></div>"
+		$(section).append("<div class=\"tFull group\"><div class=\"tImages tImages1 "  
+			+ colors[colorIndex] + "\">" + classesA + "</div>"
+			+ "<div class=\"tImages tImages2 " + colors[colorIndex] + "\">" + classesB + "</div></div>"
 			+ "<div class=\"tFull group\"><p>______ - _____ = _____</p></div>");
 	}
 }

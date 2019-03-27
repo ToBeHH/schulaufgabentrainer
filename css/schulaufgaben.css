@@ -77,3 +77,21 @@ i.fa-separator {
 .t { width:159px;}
 .deutschTest { width: 638px; }  
 }
+
+/* colors from https://clrs.cc/ */
+.colorNavy { color: #001f3f; }
+.colorBlue { color: #0074D9; }
+.colorAqua { color: #7FDBFF; }
+.colorTeal { color: #39CCCC; }
+.colorOlive { color: #3D9970; }
+.colorGreen { color: #2ECC40; }
+.colorLime { color: #01FF70; }
+.colorYellow { color: #FFDC00; }
+.colorOrange { color: #FF851B; }
+.colorRed { color: #FF4136; }
+.colorMaroon { color: #85144b; }
+.colorFuchsia { color: #F012BE; }
+.colorPurple { color: #B10DC9; }
+.colorBlack { color: #111111; }
+.colorGray { color: #AAAAAA; }
+.colorSilver { color: #DDDDDD; }
