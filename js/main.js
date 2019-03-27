@@ -77,7 +77,7 @@ function add(max, section) {
 			var a = Math.floor(Math.random() * max) + 1;
 			var b = Math.floor(Math.random() * (max - a)) + 1;
 			var key = a + "-" + b;
-		} while (already.indexOf(key) !== -1);
+		} while (already.indexOf(key) !== -1 || a === max);
 
 		$(section).append("<div class=\"t\">" + iFormat.format(a) + " + " + iFormat.format(b) + " = _____ </div>");
 		already.push(key);
