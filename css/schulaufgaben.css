@@ -57,11 +57,19 @@ i.fa-separator {
     background-size: 1.5em 1.5em;	
 }
 
+#print-button {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+}
+
 
 @media print {
   /* zusätzliche oder abweichende CSS-Regeln für Drucker */
   
   header, footer { display: none; }
+
+  #print-button { display: none; }
   
   #content-wrap {
     padding: 0;

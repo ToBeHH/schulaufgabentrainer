@@ -20,6 +20,10 @@
 		font: normal 68px Georgia, Serif;
 		letter-spacing: -4px;	
 	} 
+	header #print-button {
+        top: 60px;
+        right: 10px;
+    }
 
 	/* sidebar 
 	-------------------------------------------------------------- */
@@ -45,6 +49,10 @@
 		top: 183px; 
 		left: 30px;		
 	}   
+	header #print-button {
+        top: 60px;
+        right: 10px;
+    }
 
 }
 
@@ -77,6 +85,10 @@
 	header p#intro {			
 		font: 15px/24px 'opensans-light', Georgia, Serif;			
 	}
+	header #print-button {
+        top: 60px;
+        right: 10px;
+    }
 	
    /* mobile navigation
    -------------------------------------------------------------------- */
