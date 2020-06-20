@@ -104,7 +104,7 @@
                         do {
                             var a = Math.floor(Math.random() * wortschatz_klasse3.length);
                             var key = a;
-                        } while (already.indexOf(key) != -1);
+                        } while (already.indexOf(key) != -1 || wortschatz_klasse3[a][2] /* has no plural*/);
 
                         document.write("<div class=\"deutschTest\"><i>[</i>");
                         document.write(writeWord(wortschatz_klasse3[a][0] + " " + wortschatz_klasse3[a][1], true));
