@@ -2,6 +2,7 @@
 ###########################
 ###########################
 ## Linter GitHub Actions ##
+## https://github.com/github/super-linter/blob/master/README.md ##
 ###########################
 ###########################
 name: Lint Code Base
