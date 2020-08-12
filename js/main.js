@@ -84,6 +84,21 @@ function add(max, section) {
 	}
 }
 
+function multi(max, section) {
+	var already = new Array();
+
+	for (var i = 0; i < 100; i++) {
+		do {
+			var a = Math.floor(Math.random() * max / 10) + 1;
+			var b = Math.floor(Math.random() * max / 10) + 1;
+			var key = a + "*" + b;
+		} while (a * b > max && already.indexOf(key) != -1);
+
+		$(section).append("<div class=\"t\">" + a + " · " + b + " = _______ </div>");
+		already.push(key);
+	}
+}
+
 function sub(max, section) {
 	var already = new Array();
 	var howmuch = Math.min(max, 100);
