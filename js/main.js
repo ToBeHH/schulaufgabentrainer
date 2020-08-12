@@ -158,9 +158,13 @@ function subWithIcons(max, section, count) {
 			classesB += "<i class=\"fas fa-" + icons[iconIndex][0] + "\"></i>"
 		}
 
-		$(section).append("<div class=\"tFull group\"><div class=\"tImages tImages1 "  
+		$(section).append("<div class=\"tFull group\"><div class=\"tImages tImages1 "
 			+ colors[colorIndex] + "\">" + classesA + "</div>"
 			+ "<div class=\"tImages tImages2 " + colors[colorIndex] + "\">" + classesB + "</div></div>"
 			+ "<div class=\"tFull group\"><p>______ - _____ = _____</p></div>");
 	}
+}
+
+if (typeof init === "function") {
+	init();
 }

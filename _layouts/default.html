@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <!--[if lt IE 8 ]>
-<html class="no-js ie ie7" lang="de"> <![endif]-->
+<html class="no-js ie ie7" lang="{{ page.lang | default: site.lang | default: " de" }}"> <![endif]-->
 <!--[if IE 8 ]>
-<html class="no-js ie ie8" lang="de"> <![endif]-->
+<html class="no-js ie ie8" lang="{{ page.lang | default: site.lang | default: " de" }}"> <![endif]-->
 <!--[if IE 9 ]>
-<html class="no-js ie ie9" lang="de"> <![endif]-->
+<html class="no-js ie ie9" lang="{{ page.lang | default: site.lang | default: " de" }}"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="de"> <!--<![endif]-->
+<html class="no-js" lang="{{ page.lang | default: site.lang | default: " de" }}"> <!--<![endif]-->
 <head>
 
     <!--- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Schulaufgaben - Mathe-Test - Subtraktion</title>
-    <meta name="description" content="">
-    <meta name="author" content="Tobias Schulz-Hess">
+    <title>Schulaufgabenrechner - {{ page.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author }}">
 
     <!-- CSS
      ================================================== -->
@@ -27,7 +27,7 @@
     ================================================== -->
 
     <!-- Favicons
-    ================================================== -->
+     ================================================== -->
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -44,8 +44,10 @@
         <div class="header-content twelve columns">
 
             <h1 id="logo-text"><a href="index.html" title="">Schulaufgaben</a></h1>
+            <!-- p id="intro">Put your awesome slogan here...</p -->
+            {% if page.navcategory %}
             <a href="javascript:window.print()" id="print-button"><img src="images/print.png" srcset="images/print.png 1x, images/print_@2.png 2x" alt="Seite ausdrucken" /></a>
-            
+            {% endif %}
         </div>
 
     </div>
@@ -59,19 +61,21 @@
 
             <ul id="nav" class="nav">
                 <li><a href="index.html">Startseite</a></li>
-                <li class="current has-children"><a href="#">Mathe</a>
-                    <ul>
-                        <li><a href="mathe_multi.html?max=100">Multiplikation Zahlenraum 1-100</a></li>
-                        <li><a href="mathe_divi_1-100.html">Division Zahlenraum 1-100</a></li>
-                        <li><a href="mathe_add.html?max=1000">Addition Zahlenraum 1-1.000</a></li>
-                        <li><a href="mathe_sub.html?max=1000">Subtraktion Zahlenraum 1-1.000</a></li>
-                        <li><a href="mathe_multi.html?max=1000">Multiplikation Zahlenraum 1-1.000</a></li>
-                    </ul>
+                <li class="{% if page.navcategory == " mathe
+                " %}current {% endif %}has-children"><a href="#">Mathe</a>
+                <ul>
+                    <li><a href="mathe_multi.html?max=100">Multiplikation Zahlenraum 1-100</a></li>
+                    <li><a href="mathe_divi_1-100.html">Division Zahlenraum 1-100</a></li>
+                    <li><a href="mathe_add.html?max=1000">Addition Zahlenraum 1-1.000</a></li>
+                    <li><a href="mathe_sub.html?max=1000">Subtraktion Zahlenraum 1-1.000</a></li>
+                    <li><a href="mathe_multi.html?max=1000">Multiplikation Zahlenraum 1-1.000</a></li>
+                </ul>
                 </li>
-                <li class="has-children"><a href="#">Deutsch</a>
-                    <ul>
-                        <li><a href="deutsch_plural.html">Plural</a></li>
-                    </ul>
+                <li class="{% if page.navcategory == " deutsch
+                " %}current {% endif %}has-children"><a href="#">Deutsch</a>
+                <ul>
+                    <li><a href="deutsch_plural.html">Plural</a></li>
+                </ul>
                 </li>
             </ul> <!-- end #nav -->
 
@@ -91,15 +95,7 @@
 
             <section class="page">
 
-                <h2 class="entry-title">
-                    Subtraktion Zahlenraum 1-<span id="max"></span>
-                </h2>
-
-                <p><b>Aufgabe:</b> Subtrahiere die beiden Zahlen voneinander.</p>
-                <div id="content" class="group">
-                </div>
-                <div id="content2" class="group" style="margin-top:40px">
-                </div>
+                {{ content }}
 
             </section> <!-- End page -->
 
@@ -162,22 +158,6 @@
   crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-3.5.1.slim.min.js"><\/script>')</script>
 <script src="js/main.js"></script>
-
-<script type="text/javascript">
-
-    var maxStr = getParameterByName("max");
-    var max = 1000;
-    if (maxStr !== null) {
-        max = parseInt(maxStr, 10);
-    }
-    $("#max").html(new Intl.NumberFormat('de-DE').format(max));
-    sub(max, "#content");
-
-    if (max <= 20) {
-        subWithIcons(Math.min(max, 18), "#content2", 4);
-    }
-
-</script>
 </body>
 
 </html>
