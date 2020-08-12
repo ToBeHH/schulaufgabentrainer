@@ -1,4 +1,5 @@
-﻿
+﻿https://www.styleshout.com/free-templates/keep-it-simple/
+
 ==================================================================================================
 
 KEEP IT SIMPLE is a clean and minimalist website template designed primarily for blog sites. 
@@ -30,7 +31,7 @@ Under the following conditions:
    copyright holder
 
 Attribution: 
-	
+
    You must include a credit link to our website(http://www.Styleshout.com) somewhere on
    your site. We prefer the footer credit that comes with the template but you are still 
    free to move it somewhere else.

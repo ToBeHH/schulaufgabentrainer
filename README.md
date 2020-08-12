@@ -15,7 +15,7 @@ Die Seiten sind über die GitHub Pages verfügbar:
 # Lizenzen
 Das Projekt unter der bekannten Open Source [MIT Lizenz](LICENSE.md). 
 
-Das HTML Layout, das von [Styleshout](http://www.styleshout.com) stammt, und die damit verbundenen Schriften steht unter der Creative Commons Attribution 3.0 License. 
+Das HTML Layout, das von [Styleshout](https://www.styleshout.com/free-templates/keep-it-simple/) stammt, und die damit verbundenen Schriften steht unter der Creative Commons Attribution 3.0 License. 
 Mehr Details zu dem HTML layout gibt es [im dazu passenden README](readme_html_layout.txt).
 
 Die Schreibschrift-Schrift, die auch "Bienchen"-Schrift genannt wird, ist unter der [SIL Open Font License](fonts/Open_Font_License.txt).
