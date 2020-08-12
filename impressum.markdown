@@ -9,8 +9,8 @@ Tobias Schulz-Hess<br/>
     Rantzaustr. 96<br/>
     22041 Hamburg
                 
-###Kontakt:
-Telefon: 016094737637
+### Kontakt:
+Telefon: 016094737637<br/>
 E-Mail: schulaufgaben@schulz-hess.de
 
 Quelle: *[http://www.e-recht24.de](http://www.e-recht24.de/impressum-generator.html)*
