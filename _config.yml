@@ -28,7 +28,8 @@ author: "Tobias Schulz-Hess"
 
 # Build settings
 theme: minima
-# plugins:
+plugins:
+ - jekyll-sass-converter
 #   - jekyll-feed
 
 # Exclude from processing.
@@ -51,3 +52,7 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+sass:
+ sass_dir: _sass
+ style: compressed
