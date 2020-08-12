@@ -30,6 +30,7 @@ author: "Tobias Schulz-Hess"
 theme: minima
 plugins:
  - jekyll-sass-converter
+ - jekyll-extlinks
 #   - jekyll-feed
 
 # Exclude from processing.
@@ -56,3 +57,6 @@ exclude:
 sass:
  sass_dir: _sass
  style: compressed
+
+extlinks:
+ attributes: {rel: nofollow, target: _blank}
