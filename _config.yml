@@ -51,6 +51,3 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-sass:
- style: compressed
