@@ -22,5 +22,8 @@ title: Inhalt
 ## Mathematik 4. Klasse
 [Multiplikation Zahlenraum 1-1.000](mathe_multi.html?max=1000)
 
+## Mathematik 7. Klasse
+[Gleichungen](mathe_gleichungen.html)
+
 ## Deutsch
 [Plural-Bildung](deutsch_plural.html)
