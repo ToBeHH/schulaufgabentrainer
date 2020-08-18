@@ -12,7 +12,7 @@ navcategory: mathe
 
     var already = new Array();
 
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 50; i++) {
         const type = Math.floor(Math.random() * 7);
         let key = "";
         let a, b, c, d, x;
@@ -90,8 +90,8 @@ navcategory: mathe
 
                 document.write("<div class=\"t\">" + a + "<i>x</i> " + ((b > 0)?" + ":" - ") + Math.abs(b) + " = " + c + "<i>x</i> " + ((d > 0)?" + ":" - ") + Math.abs(d) + " </div>");
             break;               
-
         }
+        document.write("<div class=\"t\"> <i>x</i> = _______ </div>");          
         already.push(key);
     }
 
