@@ -22,8 +22,8 @@ title: Schulaufgabenrechner
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
  Individualisierte Schulaufgaben.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
 author: "Tobias Schulz-Hess"
 
 # Build settings
@@ -31,7 +31,12 @@ theme: minima
 plugins:
  - jekyll-sass-converter
  - jekyll-extlinks
+ - jekyll-redirect-from
 #   - jekyll-feed
+
+whitelist:
+ - jekyll-extlinks
+ - jekyll-redirect-from
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -60,3 +65,7 @@ sass:
 
 extlinks:
  attributes: {rel: nofollow, target: _blank}
+
+relative_links:
+ enabled:     true
+ collections: false

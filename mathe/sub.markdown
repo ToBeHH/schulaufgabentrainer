@@ -2,6 +2,8 @@
 layout: default
 title: Mathe - Subtraktion
 navcategory: mathe
+redirect_from:
+  - ../mathe_sub.html
 ---
 
 ## Subtraktion Zahlenraum 1-<span id="max"></span>

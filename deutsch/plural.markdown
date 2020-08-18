@@ -2,13 +2,15 @@
 layout: default
 title: Deutsch - Plural
 navcategory: deutsch
+redirect_from:
+  - ../deutsch_plural.html
 ---
 
 ## Deutsch Plural
 
 **Aufgabe:** Schreibe den Plural auf, also z.B. „die Frau / die Frauen“.
 
-<script src="js/deutsch.js"></script>
+<script src="../js/deutsch.js"></script>
 <script type="text/javascript">
 
     var already = new Array();

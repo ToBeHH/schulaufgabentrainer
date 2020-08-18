@@ -2,6 +2,8 @@
 layout: default
 title: Mathe - Multiplikation
 navcategory: mathe
+redirect_from:
+  - ../mathe_multi.html
 ---
 
 ## Multiplikation Zahlenraum 1-<span id="max"></span>

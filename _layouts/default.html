@@ -18,14 +18,14 @@
 
     <!-- CSS
      ================================================== -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ "css/style.css" | relative_url }}">
 
     <!-- Script - will be loaded at the end of the document
     ================================================== -->
 
     <!-- Favicons
      ================================================== -->
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="{{ "favicon.png" | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
           integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
           crossorigin="anonymous">
@@ -48,7 +48,7 @@
             <h1 id="logo-text"><a href="index.html" title="">Schulaufgaben</a></h1>
             <!-- p id="intro">Put your awesome slogan here...</p -->
             {% if page.navcategory %}
-            <a href="javascript:window.print()" id="print-button"><img src="images/print.png" srcset="images/print.png 1x, images/print_@2.png 2x" alt="Seite ausdrucken" /></a>
+            <a href="javascript:window.print()" id="print-button"><img src="{{ "images/print.png" | relative_url }}" srcset="{{ "images/print.png" | relative_url }} 1x, {{ "images/print_@2.png" | relative_url }} 2x" alt="Seite ausdrucken" /></a>
             {% endif %}
         </div>
 
@@ -62,20 +62,20 @@
         <div class="row">
 
             <ul id="nav" class="nav">
-                <li><a href="index.html">Startseite</a></li>
+                <li><a href="{{ "index.html" | relative_url }}">Startseite</a></li>
                 <li class="{% if page.navcategory == "mathe" %}current {% endif %}has-children"><a href="#">Mathe</a>
                 <ul>
-                    <li><a href="mathe_multi.html?max=100">Multiplikation Zahlenraum 1-100</a></li>
-                    <li><a href="mathe_divi_1-100.html">Division Zahlenraum 1-100</a></li>
-                    <li><a href="mathe_add.html?max=1000">Addition Zahlenraum 1-1.000</a></li>
-                    <li><a href="mathe_sub.html?max=1000">Subtraktion Zahlenraum 1-1.000</a></li>
-                    <li><a href="mathe_multi.html?max=1000">Multiplikation Zahlenraum 1-1.000</a></li>
-                    <li><a href="mathe_gleichungen.html">Gleichungen</a></li>
+                    <li><a href="{{ "mathe/multi.html?max=100" | relative_url }}">Multiplikation Zahlenraum 1-100</a></li>
+                    <li><a href="{{ "mathe/divi_1-100.html" | relative_url }}">Division Zahlenraum 1-100</a></li>
+                    <li><a href="{{ "mathe/add.html?max=1000" | relative_url }}">Addition Zahlenraum 1-1.000</a></li>
+                    <li><a href="{{ "mathe/sub.html?max=1000" | relative_url }}">Subtraktion Zahlenraum 1-1.000</a></li>
+                    <li><a href="{{ "mathe/multi.html?max=1000" | relative_url }}">Multiplikation Zahlenraum 1-1.000</a></li>
+                    <li><a href="{{ "mathe/gleichungen.html" | relative_url }}">Gleichungen</a></li>
                 </ul>
                 </li>
                 <li class="{% if page.navcategory == "deutsch" %}current {% endif %}has-children"><a href="#">Deutsch</a>
                 <ul>
-                    <li><a href="deutsch_plural.html">Plural</a></li>
+                    <li><a href="{{ "deutsch/plural.html" | relative_url }}">Plural</a></li>
                 </ul>
                 </li>
             </ul> <!-- end #nav -->
@@ -96,7 +96,7 @@
 
             <section class="page">
 
-                {{ content }}
+                {{ content  | extlinks }}
 
             </section> <!-- End page -->
 
@@ -127,23 +127,23 @@
             <h3 class="social">Navigate</h3>
 
             <ul class="navigate group">
-                <li><a href="index.html">Startseite</a></li>
-                <li><a href="mathe_multi.html?max=100">Multiplikation Zahlenraum 1-100</a></li>
-                <li><a href="mathe_divi_1-100.html">Division Zahlenraum 1-100</a></li>
-                <li><a href="mathe_add.html?max=1000">Addition Zahlenraum 1-1.000</a></li>
-                <li><a href="mathe_sub.html?max=1000">Subtraktion Zahlenraum 1-1.000</a></li>
-                <li><a href="mathe_multi.html?max=1000">Multiplikation Zahlenraum 1-1.000</a></li>
-                <li><a href="mathe_gleichungen.html">Gleichungen</a></li>
-                <li><a href="deutsch_plural.html">Deutsch Plural</a></li>
-                <li><a href="impressum.html">Impressum</a></li>
-                <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+                <li><a href="{{ "index.html" | relative_url }}">Startseite</a></li>
+                <li><a href="{{ "mathe/multi.html?max=100" | relative_url }}">Multiplikation Zahlenraum 1-100</a></li>
+                <li><a href="{{ "mathe/divi_1-100.html" | relative_url }}">Division Zahlenraum 1-100</a></li>
+                <li><a href="{{ "mathe/add.html?max=1000" | relative_url }}">Addition Zahlenraum 1-1.000</a></li>
+                <li><a href="{{ "mathe/sub.html?max=1000" | relative_url }}">Subtraktion Zahlenraum 1-1.000</a></li>
+                <li><a href="{{ "mathe/multi.html?max=1000" | relative_url }}">Multiplikation Zahlenraum 1-1.000</a></li>
+                <li><a href="{{ "mathe/gleichungen.html" | relative_url }}">Gleichungen</a></li>
+                <li><a href="{{ "deutsch/plural.html" | relative_url }}">Deutsch Plural</a></li>
+                <li><a href="{{ "impressum.html" | relative_url }}">Impressum</a></li>
+                <li><a href="{{ "datenschutz.html" | relative_url }}">Datenschutzerklärung</a></li>
             </ul>
         </div>
 
         <p class="copyright">This project is licensed under the <a
                 href="https://github.com/ToBeHH/schulaufgabentrainer/blob/master/LICENSE.md">MIT license</a>. <a
                 href="https://github.com/ToBeHH/schulaufgabentrainer">Feel free to contribute!</a> &nbsp; Design by <a
-                title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>.</p>
+                title="Styleshout" href="http://www.styleshout.com/" rel="nofollow" target="_blank">Styleshout</a>.</p>
 
     </div> <!-- End row -->
 
@@ -158,8 +158,8 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js"
         integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA=="
         crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-3.5.1.slim.min.js"><\/script>')</script>
-<script src="js/main.js"></script>
+<script>window.jQuery || document.write('<script src="{{ "js/jquery-3.5.1.slim.min.js" | relative_url }}"><\/script>')</script>
+<script src="{{ "js/main.js" | relative_url }}"></script>
 </body>
 
 </html>

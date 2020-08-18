@@ -2,6 +2,8 @@
 layout: default
 title: Mathe - Addition
 navcategory: mathe
+redirect_from:
+  - ../mathe_add.html
 ---
 ## Addition Zahlenraum 1-<span id="max"></span>
 

@@ -2,6 +2,8 @@
 layout: default
 title: Mathe - Division
 navcategory: mathe
+redirect_from:
+  - ../mathe_divi_1-100.html
 ---
 
 ## Division Zahlenraum 1-100
