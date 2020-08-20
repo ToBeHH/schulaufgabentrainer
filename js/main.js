@@ -68,15 +68,16 @@ function getParameterByName(name, url) {
 }
 
 function add(max, section) {
-	var already = new Array();
-	var howmuch = Math.min(max, 100);
-	var iFormat = new Intl.NumberFormat('de-DE');
+	const already = new Array();
+	const howmuch = Math.min(max, 100);
+	const iFormat = new Intl.NumberFormat('de-DE');
+	let a,b,key;
 
-	for (var i = 0; i < howmuch; i++) {
+	for (let i = 0; i < howmuch; i++) {
 		do {
-			var a = Math.floor(Math.random() * max) + 1;
-			var b = Math.floor(Math.random() * (max - a)) + 1;
-			var key = a + "-" + b;
+			a = Math.floor(Math.random() * max) + 1;
+			b = Math.floor(Math.random() * (max - a)) + 1;
+			key = a + "-" + b;
 		} while (already.indexOf(key) !== -1 || a === max);
 
 		$(section).append("<div class=\"t\">" + iFormat.format(a) + " + " + iFormat.format(b) + " = _____ </div>");
@@ -85,14 +86,15 @@ function add(max, section) {
 }
 
 function multi(max, section) {
-	var already = new Array();
+	const already = new Array();
+	let a,b,key;
 
-	for (var i = 0; i < 100; i++) {
+	for (let i = 0; i < 100; i++) {
 		do {
-			var a = Math.floor(Math.random() * max / 10) + 1;
-			var b = Math.floor(Math.random() * max / 10) + 1;
-			var key = a + "*" + b;
-		} while (a * b > max && already.indexOf(key) != -1);
+			a = Math.floor(Math.random() * max / 10) + 1;
+			b = Math.floor(Math.random() * max / 10) + 1;
+			key = a + "*" + b;
+		} while (a * b > max || already.indexOf(key) !== -1);
 
 		$(section).append("<div class=\"t\">" + a + " · " + b + " = _______ </div>");
 		already.push(key);
@@ -100,15 +102,16 @@ function multi(max, section) {
 }
 
 function sub(max, section) {
-	var already = new Array();
-	var howmuch = Math.min(max, 100);
-	var iFormat = new Intl.NumberFormat('de-DE');
+	const already = new Array();
+	const howmuch = Math.min(max, 100);
+	const iFormat = new Intl.NumberFormat('de-DE');
+	let a,b,key;
 
-	for (var i = 0; i < howmuch; i++) {
+	for (let i = 0; i < howmuch; i++) {
 		do {
-			var a = Math.floor(Math.random() * max * 0.9) + (max * 0.1);
-			var b = Math.floor(Math.random() * (a - (max * 0.01))) + 1;
-			var key = a + "-" + b;
+			a = Math.floor(Math.random() * max * 0.9) + (max * 0.1);
+			b = Math.floor(Math.random() * (a - (max * 0.01))) + 1;
+			key = a + "-" + b;
 			if (a === b) {
 				already.push(key);
 			}
