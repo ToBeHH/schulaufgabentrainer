@@ -42,4 +42,11 @@ function init() {
         subWithIcons(Math.min(max, 18), "#content3", 2);
     }
 }
-</script>
+</script><noscript>
+    <div class="noscript">
+        <h2>Bitte aktivieren Sie JavaScript!</h2>
+
+        Die Aufgaben werden zufällig erzeugt, dafür ist JavaScript nötig.
+    </div>
+</noscript>
+

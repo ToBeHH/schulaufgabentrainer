@@ -23,4 +23,10 @@ function init() {
 
     multi(max, "#content");
 }
-</script>
+</script><noscript>
+    <div class="noscript">
+        <h2>Bitte aktivieren Sie JavaScript!</h2>
+
+        Die Aufgaben werden zufällig erzeugt, dafür ist JavaScript nötig.
+    </div>
+</noscript>
