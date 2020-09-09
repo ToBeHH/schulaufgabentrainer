@@ -63,27 +63,49 @@ i.fa-separator {
     right: 10px;
 }
 
-
-@media print {
-  /* zusätzliche oder abweichende CSS-Regeln für Drucker */
-  
-  header, footer { display: none; }
-
-  #print-button { display: none; }
-  
-  #content-wrap {
-    padding: 0;
-}
-.row {width: 100%; max-width: auto; }
-#content-wrap #main {
-    padding: 0;
-}
-.eight, .row .eight {
+.emoji { 
     width: 100%;
 }
+.emoji-symbol { 
+    vertical-align: middle;
+    font-size: 4em;
+    padding-right: 30px;
+    width: 20%;
+    text-align: center;
+}
+.emoji-descr {
+    font-size: 0.8em;   
+}
+.emoji tr { 
+    width: 100%;
+    border-bottom: 1px dashed gray; 
+}
 
-.t { width:159px;}
-.deutschTest { width: 638px; }  
+
+@media print {
+    /* zusätzliche oder abweichende CSS-Regeln für Drucker */
+
+    header, footer { display: none; }
+
+    #print-button { display: none; }
+
+    #content-wrap {
+        padding: 0;
+    }
+    .row {width: 100%; max-width: auto; }
+    #content-wrap #main {
+        padding: 0;
+    }
+    .eight, .row .eight {
+        width: 100%;
+    }
+
+    .t { width:159px;}
+    .deutschTest { width: 638px; }
+    .page {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }  
 }
 
 /* colors from https://clrs.cc/ */

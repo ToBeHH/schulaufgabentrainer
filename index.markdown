@@ -27,3 +27,5 @@ title: Inhalt
 
 ## Deutsch
 [Plural-Bildung](deutsch/plural.html)
+
+[Emojis](deutsch/emojis.html)
