@@ -24,16 +24,16 @@ navcategory: deutsch
         ["&#129296;", "Die Lippen sind versiegelt. Das Geheimnis ist sicher."],
         ["&#128566;", "Jemand möchte oder kann in schwierigen Gesprächen nichts sagen. "],
         ["&#128580;", "Findet die momentane Situation langweilig und nervig. "],
-/*            Lying Face  U+1F925 &#129317
-            Sleepy Face U+1F62A &#128554
-            Face With Medical Mask  U+1F637 &#128567;", "Die Maske dient dem Schutz. Entweder um sich selbst oder andere vor Ansteckung zu schützen. Jemand befindet sich im Krankenhause, muss zum Arzt oder hat sich eine Krankheit eingefangen. 
-            Face With Thermometer   U+1F912 &#129298;", "Das traurige Gesicht mit dem Thermometer im Mund drückt Krankheit aus. Man hat sich eine Grippe eingefangen oder eine andere Krankheit, die mit Fieber einhergeht. Oder ist besorgt, krank zu werden.
-            Face With Head-Bandage  U+1F915 &#129301;", "Betrübt dreinschauendes Gesicht mit Kopfverband: Jemand ist krank, hatte einen Unfall oder ist im Krankenhaus. Die Bandage symbolisiert gesundheitliche Probleme.
-            Smiling Face With Sunglasses    U+1F60E &#128526
-            Nerd Face   U+1F913 &#129299;", "Riesige Brille, unbeholfenes Lächeln und Hasenzähne. Wird spaßig oder ironisch verwendet für Streber oder um auszudrücken, wie schlau man selbst ist. Stereotyp eines Nerds; einer intelligenten aber komisch gekleideten Person mit sozialen Defiziten.
-            Face With Monocle   U+1F9D0 &#129488;", "Ein Monokel ist eine Sehhilfe mit nur einem Glas. Galt Ende des 19. Jahrhunderts als Statussymbol. Etwas erscheint verdächtig! Das Smiley wirft einen mahnenden Blick in die Runde. Die „upper-class“ Version des Grübelnden Smileys.
-            Face With Open Mouth    U+1F62E &#128558
-            Hushed Face U+1F62F &#128559
+        ["&#129317;", "Symbol für eine Unwahrheit, Prahlerei oder eine unwahrscheinliche Geschichte."],
+        ["&#128554;", "Die Unterhaltung oder eine Exkursion extrem langweilig und einschläfernd ist."],
+        ["&#128567;", "Jemand befindet sich im Krankenhause, muss zum Arzt oder hat sich eine Krankheit eingefangen."], 
+        ["&#129298;", "Man hat sich eine Grippe eingefangen oder ist besorgt, krank zu werden."],
+        ["&#129301;", "Jemand ist krank, hatte einen Unfall oder ist im Krankenhaus."],
+        ["&#128526;", "Man ist ganz von sich überzeugt, hat etwas besonders gut hinbekommen und ist stolz darauf."],
+        ["&#129299;", "Wird spaßig oder ironisch verwendet für Streber oder wie schlau man selbst ist."],
+        ["&#129488;", "Etwas erscheint verdächtig! Die „upper-class“ Version des Grübelnden Smileys."],
+        //    Face With Open Mouth    U+1F62E &#128558
+    /*        Hushed Face U+1F62F &#128559
 😲   Astonished Face U+1F632 &#128562
 😳   Flushed Face    U+1F633 &#128563
 🥺   Pleading Face   U+1F97A &#129402
@@ -50,11 +50,13 @@ navcategory: deutsch
 😞   Disappointed Face   U+1F61E &#128542
 😓   Downcast Face With Sweat    U+1F613 &#128531
 😩   Weary Face  U+1F629 &#128553
-See-No-Evil Monkey  U+1F648 &#128584
-🙉   Hear-No-Evil Monkey U+1F649 &#128585
-🙊   Speak-No-Evil Monkey    U+1F64A &#128586
-💯   Hundred Points  U+1F4AF &#128175
-💢   Anger Symbol    U+1F4A2 &#128162
+*/
+        ["&#128584;", "Verschließt die Augen vor etwas/der Wahrheit oder schämt sich (auch Fremdschämen)."],
+        ["&#128585;", "Will nichts Unangenehmes oder Negatives hören. Meidet die Wahrheit und hört dem anderen nicht zu"],
+        ["&#128586;", "Das Geheimnis wird gewahrt, will nichts Böses reden oder das Gesagte ist einem raus gerutscht."],
+        ["&#128175;", "Ich bin stolz, alles ist perfekt. Ich stimme zu 100% zu. Ich hatte die volle Punktzahl in der Prüfung."],
+        ["&#128162;", "Jemand ist sehr wütend und verärgert! Warnhinweis: Vorsicht, jetzt bist du zu weit gegangen."],
+        /*
 💥   Collision   U+1F4A5 &#128165
 💫   Dizzy   U+1F4AB &#128171
 💦   Sweat Droplets  U+1F4A6 &#128166
@@ -65,38 +67,42 @@ See-No-Evil Monkey  U+1F648 &#128584
 🗨   Left Speech Bubble  U+1F5E8 &#128488
 🗯   Right Anger Bubble  U+1F5EF &#128495
 💭   Thought Balloon U+1F4AD 
-Waving Hand U+1F44B &#128075
-🤚   Raised Back Of Hand U+1F91A &#129306
-🖐   Hand With Fingers Splayed   U+1F590 &#128400
-✋   Raised Hand U+270B  &#9995
-🖖   Vulcan Salute   U+1F596 &#128406
-👌   Ok Hand U+1F44C &#128076
-✌   Victory Hand    U+270C  &#9996
-🤞   Crossed Fingers U+1F91E &#129310
-🤟   Love-You Gesture    U+1F91F &#129311
-🤘   Sign Of The Horns   U+1F918 &#129304
-🤙   Call Me Hand    U+1F919 &#129305
-👈   Backhand Index Pointing Left    U+1F448 &#128072
-👉   Backhand Index Pointing Right   U+1F449 &#128073
-👆   Backhand Index Pointing Up  U+1F446 &#128070
-🖕   Middle Finger   U+1F595 &#128405
-👇   Backhand Index Pointing Down    U+1F447 &#128071
-☝   Index Pointing Up   U+261D  &#9757
-👍   Thumbs Up   U+1F44D &#128077
-👎   Thumbs Down U+1F44E &#128078
-✊   Raised Fist U+270A  &#9994
-👊   Oncoming Fist   U+1F44A &#128074
-Emoticon, Smiley    Description Unicode Hex HTML Dec Code
-🤛   Left-Facing Fist    U+1F91B &#129307
-🤜   Right-Facing Fist   U+1F91C &#129308
-👏   Clapping Hands  U+1F44F &#128079
-🙌   Raising Hands   U+1F64C &#128588
-👐   Open Hands  U+1F450 &#128080
-🤲   Palms Up Together   U+1F932 &#129330
-🤝   Handshake   U+1F91D &#129309
-🙏   Folded Hands    U+1F64F &#128591
-
-Eggplant Emoji  U+1F346 &#127814
+        ["&#128075;", "Hallo und auf Wiedersehen! Eine gute Reise! Die freundlich winkende Hand kann zur Begrüßung als auch Verabschiedung genutzt werden. Oder sarkastisch, wenn man sich wünschte, jemand oder etwas würde verschwinden.
+        ["&#129306;", "Eine erhobene Hand, die in umgekehrter Position (Handrücken nach vorne) gezeigt wird. Jemand möchte auf sich aufmerksam machen, z.B. um etwas zu fragen oder seine Teilnahme signalisieren."], // 🤚
+        ["&#128400;", "„Komm nicht näher“ oder „Halt, warte!“ Die gespreizte Hand kann ebenso die Zahl 5 oder ein High-Five andeuten."], // 🖐
+        ["&#9995;", "Emoji zeigt eine erhobene Handfläche mit Fingern. Es steht sowohl für eine Begrüßung oder Verabschiedung als auch für „Stopp, ich habe genug!“. High Five, um zu gratulieren oder einen Erfolg zu feiern."], // ✋
+        ["&#128406;", "Finger werden zwischen Ring- und Mittelfinger gespreizt, dass ein „V“ entsteht. Das Handzeichen hat seinen Ursprung in einem jüdischen Segen. Bekannt geworden durch die Serie „Star Trek“ (Vulkanier Gruß) und Mr. Spock. Lebe lang und in Frieden."], // 🖖
+        ["&#128076;", "Daumen und Zeigefinger bilden ein O. Steht für das Wort „Okay“. Zeichen für Zustimmung, Einigung oder dass alles gut ist. Vorsicht, wird in einigen Ländern als anstößig und beleidigend („Du bist ein A**loch“) aufgefasst."], // 👌
+        ["&#9996;", "Nichts für ungut! Symbol für Frieden, das in den 60ern durch die Hippies bekannt wurde. Victory-Handzeichen steht für Sieg. Kann in England beleidigend als Frau mit gespreizten Beinen verstanden werden."], // ✌
+        ["&#129310;", "Die geschlossene Faust mit gekreuzten Zeige- und Mittelfinger wird genutzt, um jemandem Glück zu wünschen. Kindern gebrauchen diese Geste gewöhnlich, um ein Versprechen oder einen Schwur aufzuheben."], // 🤞
+*/
+        ["&#129311;", "In der amerikanischen Gebärdensprache „I love you“, also „Ich liebe dich.“"], // 🤟
+        ["&#129304;", "Die „Pommesgabel“: Untreue, Abwehr von Unglück, Teufelsgruß oder heilige Geste im Buddhismus."], // 🤘
+        ["&#129305;", "„Ruf mich an“ oder „Lass uns die Tage telefonieren“. Bei Surfern: „Immer locker bleiben“."], // 🤙
+/*
+        ["&#128072;", "Hier entlang! Zeigefinger weist nach links. Kann eine Richtung anzeigen, auf etwas hinweisen oder den wichtigen Teil einer Nachricht markieren."], // 👈
+        ["&#128073;", "Zeigefinger zeigt nach rechts. Soll die Aufmerksamkeit auf Nachfolgendes richten oder an etwas erinnern. Kann auch ein ermahnendes Wackeln des Zeigefingers darstellen."], // 👉
+        ["&#128070;", "Den Zeigefinger erheben als warnenden Hinweis oder um eine Aussage zu betonen. Kann auch heißen „Ich habe Zeit“ oder „Ich bin dabei“. Man möchte die Aufmerksamkeit auf etwas lenken."], // 👆
+        ["&#128405;", "Der erhobene Mittelfinger wird in der westlichen Kultur als unhöfliche und beleidigende Geste verwendet."], // 🖕
+        ["&#128071;", "Hand mit erhobenem Zeigefinger, der nach unten zeigt. Man möchte die Aufmerksamkeit auf etwas lenken: Schau dir den Text darunter an! Oder man fühlt sich nicht gut, ist gerade „down“."], // 👇
+        ["&#9757;", "Der erhobene Zeigefinger steht für eine Drohung: Nimm dich in Acht! Könnte auch eine Geste der Belehrung sein. Jemand hat eine Ankündigung zu machen oder etwas Wichtiges zu sagen."], // ☝
+*/
+        ["&#128077;", "Gut gemacht! Vorsicht: Wird in arabischen Ländern als erhobener Mittelfinger gedeutet."], // 👍
+/*
+        ["&#128078;", "Das war wirklich schlecht! Daumen nach unten steht für Ablehnung, Missbilligung und Abneigung. Auch als falsche Todesmythos-Bedeutung bei römischen Gladiatoren bekannt."], // 👎
+        ["&#9994;", "Ich schaffe das! Die erhobene Faust impliziert Macht und Stärke. Steht für etwas, an das man glaubt. Ebenso politische Geste und Symbol für Trotz, Solidarität sowie Widerstand."], // ✊
+        ["&#128074;", "Die entgegen gestreckte Faust steht für „Check!“ - ein Zuspruch. Begrüßung zwischen Freunden oder Geste für Übereinstimmung. Kann auch als drohender Faustschlag interpretiert werden."], // 👊
+        ["&#129307;", "Das passt wie die Faust aufs Auge! In Verbindung mit anderen Emojis ein Zeichen für einen Treffer. Lässige Form der Begrüßung. Die Geste 🤜🤛 ist bekannt als Faustcheck, Faustgruß oder umgangssprachlich Ghettofaust."], // 🤛
+        ["&#129308;", "Eine Hand zur Faust geballt, die nach rechts zeigt. Die Handgeste wird verwendet um Freunde zu begrüßen, als Zeichen von Respekt sowie Zustimmung oder zur Gratulation."], // 🤜
+        */  
+        ["&#128079;", "Bravo, sehr gut gemacht! Auch sarkastisch einsetzbar!"], // 👏
+        ["&#128588;", "Macht eine Party, tanzt wild und ausgelassen, hat gute Laune oder viel Spaß."], // 🙌
+        ["&#128080;", "Die geöffneten Hände strecken sich dem Gegenüber entgegen. Steht für Zuneigung und Offenheit."], // 👐
+        ["&#129330;", "„Ich bete, dass heute alles glattgeht“ oder „Kannst du mir bitte etwas Geld leihen“."], // 🤲
+        ["&#129309;", "Begrüßung oder Verabschiedung, als Zeichen der Übereinstimmung oder für einen Geschäftsabschluss."], // 🤝
+        ["&#128591;", "Spricht ein Gebet. Wird zudem als „High-Five“ sowie zum Danke sagen verwendet."], // 🙏
+        ["&#127814;", "Die Aubergine wird mit dem männlichen Geschlecht assoziiert. Sie zählt zu den Sexsymbolen."],
+        /*
 Male Symbol &#9794;
 ♀   Female Symbol   &#9792;
 ⚥   Male and Female Symbol  &#9893;
