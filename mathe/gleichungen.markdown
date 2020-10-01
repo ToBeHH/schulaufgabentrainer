@@ -25,7 +25,7 @@ navcategory: mathe
                     key = a + "*" + x + "+" + b;
                 } while (already.indexOf(key) != -1 && b != 0);
 
-                document.write("<div class=\"t\">" + a + " · <i>x</i> " + ((b > 0)?"+ ":"- ") + Math.abs(b) + " = " + (a*x + b) + " </div>");                
+                document.write("<div class=\"t\">" + a + " · <m>x</m> " + ((b > 0)?"+ ":"- ") + Math.abs(b) + " = " + (a*x + b) + " </div>");                
             break;
             case 1:
                 do {
@@ -34,7 +34,7 @@ navcategory: mathe
                     key = a + "+" + x;
                 } while (already.indexOf(key) != -1 && x != 0);
 
-                document.write("<div class=\"t\">" + a + " + <i>x</i> = " + (a+x) + " </div>");                
+                document.write("<div class=\"t\">" + a + " + <m>x</m> = " + (a+x) + " </div>");                
             break;
             case 2:
                 do {
@@ -43,7 +43,7 @@ navcategory: mathe
                     key = a + "*" + x;
                 } while (already.indexOf(key) != -1);
 
-                document.write("<div class=\"t\">" + a + " · <i>x</i> = " + (a*x) + " </div>"); 
+                document.write("<div class=\"t\">" + a + " · <m>x</m> = " + (a*x) + " </div>"); 
             break;
             case 3:
                 do {
@@ -54,7 +54,7 @@ navcategory: mathe
                     key = a + "*" + x + "+" + b + "+" + c + "x";
                 } while (already.indexOf(key) != -1);
 
-                document.write("<div class=\"t\">" + a + "<i>x</i> " + ((b > 0)?"+ ":"- ") + Math.abs(b) + ((c > 0)?" + ":" - ") + Math.abs(c) + "<i>x</i> = " + (a*x + b + c*x) + " </div>");
+                document.write("<div class=\"t\">" + a + "<m>x</m> " + ((b > 0)?"+ ":"- ") + Math.abs(b) + ((c > 0)?" + ":" - ") + Math.abs(c) + "<m>x</m> = " + (a*x + b + c*x) + " </div>");
             break;               
             case 4:
                 do {
@@ -65,7 +65,7 @@ navcategory: mathe
                     key = c + "+" + a + "*" + x + "+" + b;
                 } while (already.indexOf(key) != -1);
 
-                document.write("<div class=\"t\">" + c + ((a > 0)?" + ":" - ") + Math.abs(a) + "<i>x</i> " + ((b > 0)?"+ ":"- ") + Math.abs(b) + " = " + (c + a*x + b) + " </div>");
+                document.write("<div class=\"t\">" + c + ((a > 0)?" + ":" - ") + Math.abs(a) + "<m>x</m> " + ((b > 0)?"+ ":"- ") + Math.abs(b) + " = " + (c + a*x + b) + " </div>");
             break;                  
             case 5:
                 do {
@@ -76,7 +76,7 @@ navcategory: mathe
                     key =  a + "*" + x + "=" + b + "*x";
                 } while (already.indexOf(key) != -1 && b != 0);
 
-                document.write("<div class=\"t\">" + a + "<i>x</i> = " + b + "<i>x</i> " + ((c > 0)?" + ":" - ") + Math.abs(c) + " </div>");
+                document.write("<div class=\"t\">" + a + "<m>x</m> = " + b + "<m>x</m> " + ((c > 0)?" + ":" - ") + Math.abs(c) + " </div>");
             break;                    
             case 6:
                 do {
@@ -88,10 +88,10 @@ navcategory: mathe
                     key =  a + "*" + x + "=" + b + "*x";
                 } while (already.indexOf(key) != -1 && b != 0 && c != 0);
 
-                document.write("<div class=\"t\">" + a + "<i>x</i> " + ((b > 0)?" + ":" - ") + Math.abs(b) + " = " + c + "<i>x</i> " + ((d > 0)?" + ":" - ") + Math.abs(d) + " </div>");
+                document.write("<div class=\"t\">" + a + "<m>x</m> " + ((b > 0)?" + ":" - ") + Math.abs(b) + " = " + c + "<m>x</m> " + ((d > 0)?" + ":" - ") + Math.abs(d) + " </div>");
             break;               
         }
-        document.write("<div class=\"t\"> <i>x</i> = _______ </div>");          
+        document.write("<div class=\"t\"> <m>x</m> = _______ </div>");          
         already.push(key);
     }
 
