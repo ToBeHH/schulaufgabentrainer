@@ -28,4 +28,6 @@ title: Inhalt
 ## Deutsch
 [Plural-Bildung](deutsch/plural.html)
 
+[Übungs-Diktate](http://www.diktate-grundschule.de/)
+
 [Emojis](deutsch/emojis.html)

@@ -1,3 +1,18 @@
+[href^="http"]::after {
+  content: '(external link)';
+  display: inline-block;
+  width: .7em;
+  height: .7em;
+  text-indent: .7em;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url(images/Icon_External_Link.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin-left: .1em;
+}
+
 .t { float: left; font-family:Arial,sans-serif; font-size: 1em; line-height: 2.3em; margin-right: 0px; width:140px;}
 
 .tImages {
