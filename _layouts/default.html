@@ -12,7 +12,7 @@
     <!--- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Schulaufgabenrechner - {{ page.title }}</title>
+    <title>Schulaufgabenhelfer - {{ page.title }}</title>
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.author }}">
 
@@ -79,6 +79,11 @@
                     <li><a href="{{ "deutsch/emojis.html" | relative_url }}">Emojis</a></li>
                 </ul>
                 </li>
+                <li class="{% if page.navcategory == "english" %}current {% endif %}has-children"><a href="#">Englisch</a>
+                <ul>
+                    <li><a href="{{ "english/vocabulary.html" | relative_url }}">Vokabeln</a></li>
+                </ul>
+                </li>
             </ul> <!-- end #nav -->
 
         </div>
@@ -137,6 +142,7 @@
                 <li><a href="{{ "mathe/gleichungen.html" | relative_url }}">Gleichungen</a></li>
                 <li><a href="{{ "deutsch/plural.html" | relative_url }}">Deutsch Plural</a></li>
                 <li><a href="{{ "deutsch/emojis.html" | relative_url }}">Deutsch Emojis</a></li>
+                <li><a href="{{ "english/vocabulary.html" | relative_url }}">English Vocabulary</a></li>
                 <li><a href="{{ "impressum.html" | relative_url }}">Impressum</a></li>
                 <li><a href="{{ "datenschutz.html" | relative_url }}">Datenschutzerklärung</a></li>
             </ul>

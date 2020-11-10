@@ -101,6 +101,21 @@ m {
     border-bottom: 1px dashed gray; 
 }
 
+table.vocabulary, .vocabulary td, .vocabulary th {
+    border: 1px solid black;
+}
+table.vocabulary {
+    width: 100%;
+    border-collapse: collapse;
+}
+table.vocabulary td:nth-child(0), table.vocabulary td:nth-child(1) {
+    width: 50%;
+}
+.vocabulary td {
+    text-align: center;
+    height: 6ex;
+}
+
 
 @media print {
     /* zusätzliche oder abweichende CSS-Regeln für Drucker */
