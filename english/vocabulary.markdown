@@ -205,7 +205,7 @@ const data = [ {
 } // end Orange Line 4 - Unit 2
 ];
 
-    document.write("<select id=\"vocChooser\" onchange=\"update()\">");
+    document.write("<div class=\"noprint\"><select id=\"vocChooser\" onchange=\"update()\">");
     for(bookIndex in data) {
         document.write("<option value=\"" + bookIndex + "\">" + data[bookIndex].book + "</option>");
         for (sectionIndex in data[bookIndex].sections) {
@@ -217,7 +217,7 @@ const data = [ {
         }
     }
 
-    document.write("</select><br/>");
+    document.write("</select><br/></div>");
 
     document.write("<div id=\"vTable\"></div>");
 

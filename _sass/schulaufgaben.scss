@@ -141,6 +141,9 @@ table.vocabulary td:nth-child(0), table.vocabulary td:nth-child(1) {
         padding-bottom: 0;
         margin-bottom: 0;
     }  
+    .noprint {
+        display: none;
+    }
 }
 
 /* colors from https://clrs.cc/ */
