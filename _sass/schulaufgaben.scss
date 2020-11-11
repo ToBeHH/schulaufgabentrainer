@@ -13,6 +13,13 @@
   margin-left: .4em;
 }
 
+.reveal { 
+    display: none;
+    color: #6c944d;
+    font-style: italic;
+    font-weight: bold;
+}
+
 .t { float: left; font-family:Arial,sans-serif; font-size: 1em; line-height: 2.3em; margin-right: 0px; width:140px;}
 
 .tImages {
@@ -77,10 +84,20 @@ m {
     background-size: 1.5em 1.5em;	
 }
 
+.image-button:hover {
+    opacity:0.6;
+}
+
 #print-button {
     position: absolute;
     top: 60px;
     right: 10px;
+}
+
+#reveal-button {
+    position: absolute;
+    top: 60px;
+    right: 90px;
 }
 
 .emoji { 
@@ -122,7 +139,7 @@ table.vocabulary td:nth-child(0), table.vocabulary td:nth-child(1) {
 
     header, footer { display: none; }
 
-    #print-button { display: none; }
+    #print-button,#reveal-button { display: none; }
 
     #content-wrap {
         padding: 0;

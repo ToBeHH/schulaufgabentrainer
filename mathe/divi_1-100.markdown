@@ -4,6 +4,7 @@ title: Mathe - Division
 navcategory: mathe
 redirect_from:
   - ../mathe_divi_1-100.html
+canreveal: true
 ---
 
 ## Division Zahlenraum 1-100
@@ -26,7 +27,7 @@ redirect_from:
             }*/
         } while (already.indexOf(key) != -1);
 
-        document.write("<div class=\"t\">" + (a * b) + " : " + b + " = _______ </div>");
+        document.write("<div class=\"t\">" + (a * b) + " : " + b + " = <span class=\"revealHide\">_______</span><span class=\"reveal\">" + a + "</span> </div>");
         already.push(key);
     }
 

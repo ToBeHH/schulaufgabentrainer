@@ -48,7 +48,10 @@
             <h1 id="logo-text"><a href="index.html" title="">Schulaufgaben</a></h1>
             <!-- p id="intro">Put your awesome slogan here...</p -->
             {% if page.navcategory %}
-            <a href="javascript:window.print()" id="print-button"><img src="{{ "images/print.png" | relative_url }}" srcset="{{ "images/print.png" | relative_url }} 1x, {{ "images/print_@2.png" | relative_url }} 2x" alt="Seite ausdrucken" /></a>
+            <a href="javascript:window.print()" id="print-button" class="image-button"><img src="{{ "images/print.png" | relative_url }}" srcset="{{ "images/print.png" | relative_url }} 1x, {{ "images/print_@2.png" | relative_url }} 2x" alt="Seite ausdrucken" /></a>
+            {% endif %}
+            {% if page.canreveal %}
+            <a href="javascript:reveal()" id="reveal-button" class="image-button"><img src="{{ "images/reveal.png" | relative_url }}" srcset="{{ "images/reveal.png" | relative_url }} 1x, {{ "images/reveal_@2.png" | relative_url }} 2x" alt="Lösungen anzeigen" /></a>
             {% endif %}
         </div>
 

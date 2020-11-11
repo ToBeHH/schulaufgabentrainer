@@ -4,6 +4,7 @@ title: Mathe - Multiplikation
 navcategory: mathe
 redirect_from:
   - ../mathe_multi.html
+canreveal: true
 ---
 
 ## Multiplikation Zahlenraum 1-<span id="max"></span>

@@ -4,6 +4,7 @@ title: Mathe - Addition
 navcategory: mathe
 redirect_from:
   - ../mathe_add.html
+canreveal: true
 ---
 ## Addition Zahlenraum 1-<span id="max"></span>
 

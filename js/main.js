@@ -57,6 +57,16 @@
 
 })(jQuery);
 
+function reveal() {
+	for(let elem of document.getElementsByClassName("reveal")) {
+		elem.style.display = "unset";
+	}
+	for(let elem of document.getElementsByClassName("revealHide")) {
+		elem.style.display = "none";
+	}
+	document.getElementById("reveal-button").style.opacity = 0.3;
+}
+
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -70,7 +80,6 @@ function getParameterByName(name, url) {
 function add(max, section) {
 	const already = new Array();
 	const howmuch = Math.min(max, 100);
-	const iFormat = new Intl.NumberFormat('de-DE');
 	let a,b,key;
 
 	for (let i = 0; i < howmuch; i++) {
@@ -80,7 +89,7 @@ function add(max, section) {
 			key = a + "-" + b;
 		} while (already.indexOf(key) !== -1 || a === max);
 
-		$(section).append("<div class=\"t\">" + iFormat.format(a) + " + " + iFormat.format(b) + " = _____ </div>");
+		$(section).append("<div class=\"t\">" + iFormat.format(a) + " + " + iFormat.format(b) + " = <span class=\"revealHide\">_______</span><span class=\"reveal\">" + iFormat.format(a+b) + "</span> </div>");
 		already.push(key);
 	}
 }
@@ -96,7 +105,7 @@ function multi(max, section) {
 			key = a + "*" + b;
 		} while (a * b > max || already.indexOf(key) !== -1);
 
-		$(section).append("<div class=\"t\">" + a + " · " + b + " = _______ </div>");
+		$(section).append("<div class=\"t\">" + a + " · " + b + " = <span class=\"revealHide\">_______</span><span class=\"reveal\">" + iFormat.format(a*b) + "</span> </div>");
 		already.push(key);
 	}
 }
@@ -117,7 +126,7 @@ function sub(max, section) {
 			}
 		} while (already.indexOf(key) !== -1);
 
-		$(section).append("<div class=\"t\">" + iFormat.format(a) + " - " + iFormat.format(b) + " = _____ </div>");
+		$(section).append("<div class=\"t\">" + iFormat.format(a) + " - " + iFormat.format(b) + " = <span class=\"revealHide\">_______</span><span class=\"reveal\">" + iFormat.format(a-b) + "</span> </div>");
 		already.push(key);
 	}
 }
@@ -138,6 +147,7 @@ var icons = [["crow", "dove"],
 	["walking", "walking fa-flip-horizontal"]];
 var colors = ["colorNavy", "colorBlue", "colorOlive", "colorGreen", "colorRed", "colorOrange", 
 	"colorPurple", "colorMaroon", "colorFuchsia", "colorBlack"];
+const iFormat = new Intl.NumberFormat('de-DE');
 
 function subWithIcons(max, section, count) {
 	for (var i = 0; i < count; i++) {
@@ -164,7 +174,9 @@ function subWithIcons(max, section, count) {
 		$(section).append("<div class=\"tFull group\"><div class=\"tImages tImages1 "
 			+ colors[colorIndex] + "\">" + classesA + "</div>"
 			+ "<div class=\"tImages tImages2 " + colors[colorIndex] + "\">" + classesB + "</div></div>"
-			+ "<div class=\"tFull group\"><p>______ - _____ = _____</p></div>");
+			+ "<div class=\"tFull group\"><p><span class=\"revealHide\">_______</span><span class=\"reveal\">" + a 
+			+ "</span> - <span class=\"revealHide\">_______</span><span class=\"reveal\">" + b 
+			+ "</span> = <span class=\"revealHide\">_______</span><span class=\"reveal\">" + (a-b) + "</span></p></div>");
 	}
 }
 

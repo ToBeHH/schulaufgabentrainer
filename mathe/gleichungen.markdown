@@ -2,6 +2,7 @@
 layout: default
 title: Mathe - Gleichungen
 navcategory: mathe
+canreveal: true
 ---
 
 ## Gleichungen
@@ -91,7 +92,7 @@ navcategory: mathe
                 document.write("<div class=\"t\">" + a + "<m>x</m> " + ((b > 0)?" + ":" - ") + Math.abs(b) + " = " + c + "<m>x</m> " + ((d > 0)?" + ":" - ") + Math.abs(d) + " </div>");
             break;               
         }
-        document.write("<div class=\"t\"> <m>x</m> = _______ </div>");          
+        document.write("<div class=\"t\"> <m>x</m> = <span class=\"revealHide\">_______</span><span class=\"reveal\">" + x + "</span> </div>");          
         already.push(key);
     }
 

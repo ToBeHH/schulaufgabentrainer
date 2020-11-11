@@ -2,6 +2,7 @@
 layout: default
 title: Deutsch - Emojis
 navcategory: deutsch
+canreveal: true
 ---
 
 ## Emojis
@@ -135,7 +136,7 @@ Male Symbol &#9794;
         const already_solutions = new Array();
         for (let j = 0; j < 4; j++) {
             if (j === correct_solution) {
-                document.write(" <i class=\"far fa-square\"></i> &nbsp;&nbsp;&nbsp; " + data[a][1] + "<br/>");
+                document.write(" <span class=\"revealHide\"><i class=\"far fa-square\"></i></span><span class=\"reveal\"><i class=\"far fa-check-square\"></i></span> &nbsp;&nbsp;&nbsp; " + data[a][1] + "<br/>");
             } else {
                 let b;
                 do {

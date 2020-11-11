@@ -2,6 +2,7 @@
 layout: default
 title: English - Vocabulary
 navcategory: english
+canreveal: true
 ---
 
 ## English Vocabulary
@@ -254,9 +255,9 @@ function update() {
 
         html += "<tr>";
         if (Math.random() < 0.5) {
-            html += "<td>" + vdata[a][0] + "</td><td></td>";
+            html += "<td>" + vdata[a][0] + "</td><td><span class=\"reveal\">" + vdata[a][1] + "</span></td>";
         } else {
-            html += "<td></td><td>" + vdata[a][1] + "</td>";
+            html += "<td><span class=\"reveal\">" + vdata[a][0] + "</span></td><td>" + vdata[a][1] + "</td>";
         }
         html += "</tr>";
         already.push(a);

@@ -4,6 +4,7 @@ title: Mathe - Subtraktion
 navcategory: mathe
 redirect_from:
   - ../mathe_sub.html
+canreveal: true
 ---
 
 ## Subtraktion Zahlenraum 1-<span id="max"></span>
