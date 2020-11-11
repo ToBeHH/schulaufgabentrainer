@@ -19,8 +19,12 @@ title: Inhalt
 
 [Subtraktion Zahlenraum 1-1.000](mathe/sub.html?max=1000)
 
+[Textaufgaben Zahlenraum 1-100](mathe/text.html?max=100)
+
 ## Mathematik 4. Klasse
 [Multiplikation Zahlenraum 1-1.000](mathe/multi.html?max=1000)
+
+[Textaufgaben Zahlenraum 1-1.000](mathe/text.html?max=1000)
 
 ## Mathematik 7. Klasse
 [Gleichungen](mathe/gleichungen.html)
