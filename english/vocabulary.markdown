@@ -7,9 +7,13 @@ navcategory: english
 ## English Vocabulary
 
 <script type="text/javascript">
-const vocabulary = [ {
-    "section": "Orange Line 4 - Unit 2",
-    vocabulary: [
+const data = [ {
+    book: "Orange Line 4",
+    sections: [ {
+        section: "Unit 2",
+        subsections: [ {
+            subsection: "Way in",
+            vocabulary: [
 ["best known", "weltberühmt"],
 ["flat", "flach, platt"],
 ["farmland", "Ackerland; Ackerboden; Landwirtschaftsflächen"],
@@ -40,7 +44,10 @@ const vocabulary = [ {
 ["chaser", "Jäger; Jägerin; Verfolger; Verfolgerin"],
 ["direction", "Richtung"],
 ["cloud", "Wolke"],
-["to tear (up)", "kaputt machen; zerreißen; reißen"],
+["to tear (up)", "kaputt machen; zerreißen; reißen"]
+        ] }, {
+            subsection: "Station 1",
+            vocabulary: [
 ["locker", "Schließfach; Spind"],
 ["morning message", "morgendliche Ansprache"],
 ["principal", "Schulleiter; Schulleiterin"],
@@ -90,6 +97,9 @@ const vocabulary = [ {
 ["so that", "damit; so dass"],
 ["blast", "Wahnsinnsspaß"],
 ["to stay up", "aufbleiben"],
+        ] }, {
+            subsection: "Station 2",
+            vocabulary: [
 ["helpful", "hilfsbereit"],
 ["cooperative", "kooperativ; hilfsbereit"],
 ["responsible", "verantwortlich; verantwortungsvoll"],
@@ -157,6 +167,9 @@ const vocabulary = [ {
 ["babysitter", "Babysitter; Babysitterin"],
 ["to take care of somebody", "sich um jemanden kümmern; für jemanden sorgen"],
 ["mostly", "meistens; hauptsächlich"],
+        ] }, {
+            subsection: "Reading corner",
+            vocabulary: [
 ["date", "Verabredung; Date"],
 ["to ask somebody out", "sich mit jemanden verabreden"],
 ["boyfriend", "Freund (in einer Paarbeziehung)"],
@@ -171,37 +184,93 @@ const vocabulary = [ {
 ["to pick up", "abholen"],
 ["everybody", "jeder; alle"],
 ["dancing", "Tanzen; Tanz-"],
+        ] }, {
+            subsection: "Film corner",
+            vocabulary: [
 ["buddy", "Kumpel"],
 ["homeroom", "erste Stunde (in der Schule)"],
 ["atmosphere", "Atmosphäre; Stimmung"],
 ["relationship", "Beziehung"],
 ["to interest", "interessieren"],
-["field trip", "Schulausflug"],
+["field trip", "Schulausflug"],        
+        ] }, {
+            subsection: "Presentation skills",
+            vocabulary: [
 ["presentation", "Präsentation; Vortrag"],
 ["topic", "Thema"],
 ["second", "zweitens"]
+        ] }
+    ] }
 ]
 } // end Orange Line 4 - Unit 2
 ];
 
-    var already = new Array();
-    document.write("<table class=\"vocabulary\"><tr><td>English</td><td>German</td></tr>");
+    document.write("<select id=\"vocChooser\" onchange=\"update()\">");
+    for(bookIndex in data) {
+        document.write("<option value=\"" + bookIndex + "\">" + data[bookIndex].book + "</option>");
+        for (sectionIndex in data[bookIndex].sections) {
+            document.write("<option value=\"" + bookIndex + "-" + sectionIndex + "\">" + data[bookIndex].book + " - "  + data[bookIndex].sections[sectionIndex].section + "</option>");
+            for (subSectionIndex in data[bookIndex].sections[sectionIndex].subsections) {
+                document.write("<option value=\"" + bookIndex + "-" + sectionIndex +  "-" + subSectionIndex + "\">" + data[bookIndex].book + " - "  + data[bookIndex].sections[sectionIndex].section
+                     + " - "  + data[bookIndex].sections[sectionIndex].subsections[subSectionIndex].subsection + "</option>");
+            }
+        }
+    }
 
-    for (var i = 0; i < 18; i++) {
+    document.write("</select><br/>");
+
+    document.write("<div id=\"vTable\"></div>");
+
+    update();
+
+function update() {
+    const selector = document.getElementById("vocChooser");
+    let vdata = [];
+    const indices = selector.value.split("-");
+    if (indices.length == 1) {
+        for (sectionIndex in data[parseInt(indices[0])].sections) {
+            for (subSectionIndex in data[parseInt(indices[0])].sections[sectionIndex].subsections) {
+                vdata = vdata.concat(data[parseInt(indices[0])].sections[sectionIndex].subsections[subSectionIndex].vocabulary);
+            }
+        }
+    }
+    if (indices.length == 2) {
+        for (subSectionIndex in data[parseInt(indices[0])].sections[parseInt(indices[1])].subsections) {
+            vdata = vdata.concat(data[parseInt(indices[0])].sections[parseInt(indices[1])].subsections[subSectionIndex].vocabulary);
+        }
+    }
+    if (indices.length == 3) {
+        vdata = data[parseInt(indices[0])].sections[parseInt(indices[1])].subsections[parseInt(indices[2])].vocabulary;
+    }
+
+    var already = new Array();
+    let html = "";
+    html += "<table class=\"vocabulary\"><tr><td>English</td><td>German</td></tr>";
+
+    for (var i = 0; i < Math.min(vdata.length, 18); i++) {
         do {
-            var a = Math.floor(Math.random() * vocabulary[0].vocabulary.length);
+            var a = Math.floor(Math.random() * vdata.length);
         } while (already.indexOf(a) != -1);
 
-        document.write("<tr>");
+        html += "<tr>";
         if (Math.random() < 0.5) {
-            document.write("<td>" + vocabulary[0].vocabulary[a][0] + "</td><td></td>");
+            html += "<td>" + vdata[a][0] + "</td><td></td>";
         } else {
-            document.write("<td></td><td>" + vocabulary[0].vocabulary[a][1] + "</td>");
+            html += "<td></td><td>" + vdata[a][1] + "</td>";
         }
-        document.write("</tr>");
+        html += "</tr>";
         already.push(a);
     }
-    document.write("</tr></table>");
+    html += "</tr></table>";
+
+    const table = document.getElementById("vTable");
+    if (table) {
+        table.innerHTML = html;
+    } else {
+        document.write(html);
+    }
+    
+}
 </script><noscript>
     <div class="noscript">
         <h2>Bitte aktivieren Sie JavaScript!</h2>
