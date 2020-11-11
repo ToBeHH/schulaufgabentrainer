@@ -248,7 +248,7 @@ function update() {
     let html = "";
     html += "<table class=\"vocabulary\"><tr><td>English</td><td>German</td></tr>";
 
-    for (var i = 0; i < Math.min(vdata.length, 18); i++) {
+    for (var i = 0; i < Math.min(vdata.length, 17); i++) {
         do {
             var a = Math.floor(Math.random() * vdata.length);
         } while (already.indexOf(a) != -1);
