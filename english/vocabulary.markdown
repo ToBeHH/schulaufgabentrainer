@@ -11,6 +11,245 @@ canreveal: true
 const data = [ {
     book: "Orange Line 4",
     sections: [ {
+        section: "Unit 1",
+        subsections: [ {
+            subsection: "Zoom in - The USA",
+            vocabulary: [
+["fall", "Herbst"],
+["state", "Staat; Bundesstaat; Land"],
+["to shine", "scheinen; glänzen"],
+["bright", "hell; leuchtend; strahlend"],
+["color", "Farbe"],
+["huge", "riesig; riesengroß"],
+["area", "Fläche"],
+["corn", "Korn; Mais; Getreide"],
+["soy bean", "Sojabone"],
+["field", "Feld; Wiese; Weide"],
+["surfer", "Wellenreiter; Wellenreiterin; Surfer; Surferin"],
+["paradise", "Paradies"],
+["perfect", "perfekt; vollkommen"],
+["wave", "Welle"],
+["North America", "Nordamerika"],
+["landscape", "Landschaft"],
+["American", "amerikanisch; aus Amerika; Amerikaner; Amerikanerin"],
+["swamp", "Sumpf"],
+["alligator", "Alligator"],
+["rose", "Rose"],
+["bald eagle", "Weißkopfseeadler"],
+["total", "Gesamt-; gesamt"],
+["square mile", "Quadratmeile"],
+["currency", "Währung"],
+["dollar", "Dollar"],
+["time zone", "Zeitzone"],
+["major", "Haupt-; wichtig; bedeutend"],
+["to name", "benennen"],
+["north of", "nördlich von"],
+["south of", "südlich von"],
+["ocean", "Ozean; Meer"],
+["east of", "östlich von"],
+["west of", "westlich von"],
+["distance", "Entfernung; Distanz"]
+            ]}, // end unit 1, subsection 1
+        {
+            subsection: "Unit 1 Gateway NYC",
+            vocabulary: [
+["gateway", "Tor; Eingangstor"],
+["borough", "Stadtteil; Bezirk"],
+["nickname", "Spitzname"],
+["to stand out", "auffallen; herausragen; herausstechen"],
+["skyline", "Skyline"],
+["foot", "Fuß (Längenmaß: 30,48 cm)"],
+["to replace", "ersetzen"],
+["attack", "Angriff; Attacke"],
+["baseball", "Baseball"],
+["New Yorker", "New Yorker; New Yorkerin"],
+["especially", "besonders; vor allem"],
+["best-paid", "bestbezahlt"],
+["center", "Zentrum; Mitte; Center"],
+["theater", "Theater"],
+["collection", "Sammlung; Kollektion"],
+["cultural movement", "Kulturbewegung"],
+["independence", "Unabhängigkeit"],
+["immigrant", "Immigrant; Immigrantin; Einwanderer; Einwandererin"],
+["symbol", "Symbol"],
+["hope", "Hoffnung"],
+["event", "Ereignis; Veranstaltung"],
+["on TV", "im Fernsehen"],
+["top", "Spitze"],
+["elevator", "Aufzug; Lift"],
+["light", "Licht"],
+["to be located", "gelegen sein; sich befinden"],
+["grounds", "Gelände; Gebiet"],
+["billion", "Milliarden"],
+["traffic jam", "Stau"],
+["rush hour", "Hauptverkehrszeit"],
+["roadwork", "Straßenbauarbeiten"],
+["downtown", "im Stadtzentrum"],
+["landmark", "Wahrzeichen"],
+["skyscraper", "Wolkenkratzer"],
+["story", "Stock; Stockwerk; Etage"],
+["block", "Block; Häuserblock"],
+["subway", "U-Bahn"],
+["avenue", "Allee; Boulevard"],
+["lights", "Ampel"],
+["intersection", "Kreuzung"],
+["sightseeing", "Besichtigungstour"],
+["sidewalk", "Gehweg; Bürgersteig"],
+["parking lot", "Parkplatz"],
+["commuter", "Pendler; Pendlerin"],
+["construction site", "Baustelle"],
+["suburb", "Vorort"],
+["ride", "Fahrt, Ritt"],
+["even", "lieber"],
+["snow", "Schnee"],
+["to get into", "hineinkommen; hineingelangen"],
+["to get tired of something", "etwas sattbekommen; etwas satthaben"],
+["financial", "finanziell; Finanz-"],
+["in the distance", "in der Ferne"],
+["back then", "damals"],
+["view", "Aussicht; Sicht; Ausblick; Blick"],
+["anyway", "eigentlich"],
+["bagel", "Bagel"],
+["coffee", "Kaffee"],
+["to check out", "anschauen; ausprobieren"],
+["star sign", "Sternzeichen"],
+["ceiling", "Zimmerdecke"],
+["correct", "richtig; korrekt"],
+["to have no idea", "keine Ahnung haben"],
+["arround", "um … herum"],
+["hot dog", "Hot Dog"],
+["cart", "Stand"],
+["to belong (to)", "gehören (zu)"],
+["to get to", "hinkommen zu; gelangen"],
+["Let's get moving!", "Lasst uns weiterfahren! Auf geht's!"],
+["shopping mall", "Einkaufszentrum"],
+["right ahead", "geradeaus"],
+["to point out", "zeigen; darauf hinweisen"],
+["down there", "dahin; da unten"],
+["Native American", "Ureinwohner Amerikas; Indianer; indianisch"]
+        ]}, // end unit 1, subsection 2 (Gateway NYC)
+        {
+            subsection: "Station 2",
+            vocabulary: [
+["to immigrate", "einwandern; immigrieren"],
+["decision", "Entscheidung"],
+["unemployment", "arbeitslos"],
+["chance", "Möglichkeit"],
+["community", "Gemeinde; Gemeindschaft"],
+["career", "Beruf; Laufbahn; Karriere"],
+["culture", "Kultur"],
+["motivated", "motiviert"],
+["ambitious", "ehrgeizig"],
+["opportunity", "Gelegenheit; Chance"],
+["citizen", "Staatsbürger; Staatsangehöriger"],
+["contact", "Kontakt"],
+["foreign", "fremd; ausländisch"],
+["to get used to (something)", "sich an (etwas) gewöhnen"],
+["to emigrate", "auswandern; emigrieren"],
+["to succeed (in)", "Erfolg haben (mit/bei) nachfolgen"],
+["to fail (at)", "veragen (in/bei); ausfallen; fehlschlagen"],
+["support", "Unterstützung; Hilfe"],
+["to adapt to", "sich anpassen"],
+["to cross the border", "übder die Grenze gehen; die Grenze überschreiten"],
+["interviewer", "Interviewer; Befrager; Befragerin"],
+["to go ahead", "fortfahren; loslegen; vorangehen"],
+["season", "Saison; Jahreszeit"],
+["so far", "bis jetzt"],
+["Latin America", "Lateinamerika"],
+["league", "Liga"],
+["Cuba", "Kuba"],
+["mom", "Mama"],
+["strange", "fremd"],
+["poor", "arm"],
+["above all", "vor allen Dingen; in erster Linie"],
+["Cuban", "kubanisch; aus Kuba; Kubaner"],
+["goods", "Güter; Waren"],
+["to count", "zählen"],
+["to begin", "beginnen; anfangen"],
+["to take something seriously", "etwas ernst nehmen"],
+["high school", "Highschool"],
+["to take off", "durchstarten; abheben"],
+["certainly", "allerdings"],
+["example", "Beispiel"],
+["to come true", "wahr werden; in Erfüllung gehen"],
+["US", "US-amerikanisch"],
+["to develop", "(sich) entwickeln"],
+["tourism", "Tourismus"],
+["home country", "Heimar; Heimatland"],
+["The Philippines", "die Philippinen"],
+["reader", "Leser; Leserin"]
+        ]}, // end unit 1, subsection 3 (Station 2)
+        {
+            subsection: "Reading corner",
+            vocabulary: [
+["immigration", "Immigration; Zuwanderung"],
+["to bring to life", "zum Leben erwecken; veranschaulichen"],
+["statement", "Aussage; Behauptung; Erklärung"],
+["descendant", "Abkömmling; Nachfahre; Nachfahrerin"],
+["to search", "durchsuchen; suchen"],
+["to save", "sparen"],
+["statistics", "Statistik"],
+["to work off", "abarbeiten"],
+["steamship", "Dampfschiff; Dampfer"],
+["condition", "Bedingung; Zustand"],
+["crowded", "überfüllt"],
+["space", "Ort; Stelle; Platz; Raum; Fläche"],
+["little", "wenig; kaum"],
+["deck", "Schiffsdeck"],
+["area", "Bereich"],
+["air", "Luft"],
+["crossing", "Überfahrt; Überquerung"],
+["majority", "Mehrheit; Mehrzahl"],
+["physical", "physisch; körperlich"],
+["mental", "geistig"],
+["state", "Zustand"],
+["over", "vorbei"],
+["disease", "Krankheit"],
+["inspection", "Inspektion; Kontrolle; Überprüfung"],
+["harbor", "Hafen"],
+["arrival", "Ankömmling"],
+["word", "Wort"],
+["Polish", "polnisch; Polnisch; aus Polen"],
+["goddess", "Göttin"],
+["powerful", "stark; mächtig; bedeutend; beeindruckend"],
+["to dock", "andocken"],
+["medical", "medizinisch; ärztlich"],
+["unpleasant", "unangenehm; unerfreulich"],
+["certain", "bestimmte"],
+["percent (%)", "Prozent"],
+["to return", "zurückkehren; zurückgeben"],
+["minority", "Minderheit"],
+["check", "Kontrolle"],
+["the rest", "der Rest"],
+["free", "frei"],
+["ahead of", "vor"],
+["Scandinavia", "Skandinavien"],
+["Greece", "Griechenland"],
+["Eastern Europe", "Osteuropa"],
+["Russia", "Russland"],
+["religious", "religiös; gläubig"],
+["political", "politisch"],
+["freedom", "Freiheit; Unabhängigkeit"],
+["to escape", "entkommen; fliehen; entfliehen; flüchten"],
+["poverty", "Armut"],
+["Mexico", "Mexiko"],
+["China", "China"],
+["The Domenican Republic", "Dominikanische Republik"],
+["Vietnam", "Vietnam"],
+["source", "Quelle"],
+        ]}, // end unit 1, subsection 4 (Reading corner)
+        {
+            subsection: "Film corner",
+            vocabulary: [
+["once", "einst; einmal"],
+["honor", "Ehre"],
+["great-grandparents", "Urgroßeltern"],
+["inside", "innen; drinnen"],
+["angel", "Engel"],
+["ethnic", "ethnisch; Volks-"],
+        ]}  // end unit 1, subsection 5 (Film corner)
+    ]}, // end unit 1
+    {
         section: "Unit 2",
         subsections: [ {
             subsection: "Way in",
@@ -200,10 +439,9 @@ const data = [ {
 ["presentation", "Präsentation; Vortrag"],
 ["topic", "Thema"],
 ["second", "zweitens"]
-        ] }
-    ] }
-]
-} // end Orange Line 4 - Unit 2
+        ] } // end unit 2 - subsection 5
+    ] } // end unit 2
+] } // end Orange Line 4 
 ];
 
     document.write("<div class=\"noprint\"><select id=\"vocChooser\" onchange=\"update()\">");
@@ -248,19 +486,33 @@ function update() {
     let html = "";
     html += "<table class=\"vocabulary\"><tr><td>English</td><td>German</td></tr>";
 
+    let lastRandom1 = 0;
+    let lastRandom2 = 1;
+
     for (var i = 0; i < Math.min(vdata.length, 17); i++) {
         do {
             var a = Math.floor(Math.random() * vdata.length);
         } while (already.indexOf(a) != -1);
 
         html += "<tr>";
-        if (Math.random() < 0.5) {
+
+        let nextRandom = Math.random();
+        if (lastRandom1 < 0.5 && lastRandom2 < 0.5 && nextRandom < 0.5) {
+            nextRandom = 1;
+        }
+        if (lastRandom1 >= 0.5 && lastRandom2 >= 0.5 && nextRandom >= 0.5) {
+            nextRandom = 0;
+        }
+
+        if (nextRandom < 0.5) {
             html += "<td>" + vdata[a][0] + "</td><td><span class=\"reveal\">" + vdata[a][1] + "</span></td>";
         } else {
             html += "<td><span class=\"reveal\">" + vdata[a][0] + "</span></td><td>" + vdata[a][1] + "</td>";
         }
         html += "</tr>";
         already.push(a);
+        lastRandom2 = lastRandom1;
+        lastRandom1 = nextRandom;
     }
     html += "</tr></table>";
 
