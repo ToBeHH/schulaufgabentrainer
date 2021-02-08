@@ -53,6 +53,9 @@
             {% if page.canreveal %}
             <a href="javascript:reveal()" id="reveal-button" class="image-button"><img src="{{ "images/reveal.png" | relative_url }}" srcset="{{ "images/reveal.png" | relative_url }} 1x, {{ "images/reveal_@2.png" | relative_url }} 2x" alt="Lösungen anzeigen" /></a>
             {% endif %}
+            {% if page.canreload %}
+            <a href="javascript:reload()" id="reload-button" class="image-button"><img src="{{ "images/reload.png" | relative_url }}" srcset="{{ "images/reload.png" | relative_url }} 1x, {{ "images/reload_@2.png" | relative_url }} 2x" alt="Neue Aufgaben generieren" /></a>
+            {% endif %}
         </div>
 
     </div>
