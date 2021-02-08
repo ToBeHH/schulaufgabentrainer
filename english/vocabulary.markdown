@@ -3,6 +3,7 @@ layout: default
 title: English - Vocabulary
 navcategory: english
 canreveal: true
+canreload: true
 ---
 
 ## English Vocabulary
@@ -444,7 +445,7 @@ const data = [ {
 ] } // end Orange Line 4 
 ];
 
-    document.write("<div class=\"noprint\"><select id=\"vocChooser\" onchange=\"update()\">");
+    document.write("<div class=\"noprint\"><select id=\"vocChooser\" onchange=\"reload()\">");
     for(bookIndex in data) {
         document.write("<option value=\"" + bookIndex + "\">" + data[bookIndex].book + "</option>");
         for (sectionIndex in data[bookIndex].sections) {
@@ -460,12 +461,16 @@ const data = [ {
 
     document.write("<div id=\"vTable\"></div>");
 
-    update();
+    var hash = window.location.hash.substr(1);
+    if (hash === "") {
+        reload();
+    } else {
+        redraw(hash);
+    }
 
-function update() {
-    const selector = document.getElementById("vocChooser");
+function getVocuabularyData(selector) {
     let vdata = [];
-    const indices = selector.value.split("-");
+    const indices = selector.split("-");
     if (indices.length == 1) {
         for (sectionIndex in data[parseInt(indices[0])].sections) {
             for (subSectionIndex in data[parseInt(indices[0])].sections[sectionIndex].subsections) {
@@ -480,11 +485,24 @@ function update() {
     }
     if (indices.length == 3) {
         vdata = data[parseInt(indices[0])].sections[parseInt(indices[1])].subsections[parseInt(indices[2])].vocabulary;
-    }
+    }   
+    return vdata;
+}
+function parseHash(hash) {
+    var result = hash.split('&').reduce(function (res, item) {
+        var parts = item.split('=');
+        res[parts[0]] = parts[1];
+        return res;
+    }, {});
+    return result;
+}
+
+function reload() {
+    const selector = document.getElementById("vocChooser");
+    let hash = "s=" + selector.value + "&v=";
+    const vdata = getVocuabularyData(selector.value);
 
     var already = new Array();
-    let html = "";
-    html += "<table class=\"vocabulary\"><tr><td>English</td><td>German</td></tr>";
 
     let lastRandom1 = 0;
     let lastRandom2 = 1;
@@ -493,8 +511,7 @@ function update() {
         do {
             var a = Math.floor(Math.random() * vdata.length);
         } while (already.indexOf(a) != -1);
-
-        html += "<tr>";
+        hash += a.toString(16);
 
         let nextRandom = Math.random();
         if (lastRandom1 < 0.5 && lastRandom2 < 0.5 && nextRandom < 0.5) {
@@ -503,16 +520,42 @@ function update() {
         if (lastRandom1 >= 0.5 && lastRandom2 >= 0.5 && nextRandom >= 0.5) {
             nextRandom = 0;
         }
+        hash += "," + (nextRandom<0.5?0:1) + ",";
 
-        if (nextRandom < 0.5) {
+        already.push(a);
+        lastRandom2 = lastRandom1;
+        lastRandom1 = nextRandom;
+    }
+    // remove last comma
+    hash = hash.substr(0,hash.length-1);
+
+    window.location.hash = hash;
+    redraw(hash);
+}
+
+function redraw(hash) {
+    const hashData = parseHash(hash);
+
+    document.getElementById("vocChooser").value = hashData.s;
+    const vdata = getVocuabularyData(hashData.s);
+
+    let html = "";
+    html += "<table class=\"vocabulary\"><tr><td>English</td><td>German</td></tr>";
+
+    const v = hashData.v.split(",");
+
+    for(let i=0; i<v.length/2; i++) {
+        html += "<tr>";
+        const a = parseInt(v[i*2],16);
+        const leftRight = parseInt(v[i*2+1],10);
+
+        if (leftRight === 0) {
             html += "<td>" + vdata[a][0] + "</td><td><span class=\"reveal\">" + vdata[a][1] + "</span></td>";
         } else {
             html += "<td><span class=\"reveal\">" + vdata[a][0] + "</span></td><td>" + vdata[a][1] + "</td>";
         }
         html += "</tr>";
-        already.push(a);
-        lastRandom2 = lastRandom1;
-        lastRandom1 = nextRandom;
+
     }
     html += "</tr></table>";
 
