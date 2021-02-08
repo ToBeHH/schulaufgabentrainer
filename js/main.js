@@ -58,13 +58,23 @@
 })(jQuery);
 
 function reveal() {
-	for(let elem of document.getElementsByClassName("reveal")) {
-		elem.style.display = "unset";
+	if (document.getElementById("reveal-button").style.opacity === 1) {
+		for(let elem of document.getElementsByClassName("reveal")) {
+			elem.style.display = "unset";
+		}
+		for(let elem of document.getElementsByClassName("revealHide")) {
+			elem.style.display = "none";
+		}
+		document.getElementById("reveal-button").style.opacity = 0.3;
+	} else {
+		for(let elem of document.getElementsByClassName("reveal")) {
+			elem.style.display = "none";
+		}
+		for(let elem of document.getElementsByClassName("revealHide")) {
+			elem.style.display = "unset";
+		}
+		document.getElementById("reveal-button").style.opacity = 1;
 	}
-	for(let elem of document.getElementsByClassName("revealHide")) {
-		elem.style.display = "none";
-	}
-	document.getElementById("reveal-button").style.opacity = 0.3;
 }
 
 function getParameterByName(name, url) {
