@@ -58,7 +58,8 @@
 })(jQuery);
 
 function reveal() {
-	if (document.getElementById("reveal-button").style.opacity == 1) {
+	if (document.getElementById("reveal-button").style.opacity === "" || 
+		document.getElementById("reveal-button").style.opacity == 1) {
 		for(let elem of document.getElementsByClassName("reveal")) {
 			elem.style.display = "unset";
 		}
