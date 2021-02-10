@@ -488,14 +488,6 @@ function getVocuabularyData(selector) {
     }   
     return vdata;
 }
-function parseHash(hash) {
-    var result = hash.split('&').reduce(function (res, item) {
-        var parts = item.split('=');
-        res[parts[0]] = parts[1];
-        return res;
-    }, {});
-    return result;
-}
 
 function reload() {
     const selector = document.getElementById("vocChooser");
