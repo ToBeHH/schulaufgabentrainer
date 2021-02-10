@@ -460,13 +460,15 @@ const data = [ {
     document.write("</select><br/></div>");
 
     document.write("<div id=\"vTable\"></div>");
-
+    
+function init() {
     var hash = window.location.hash.substr(1);
     if (hash === "") {
         reload();
     } else {
         redraw(hash);
     }
+}
 
 function getVocuabularyData(selector) {
     let vdata = [];
