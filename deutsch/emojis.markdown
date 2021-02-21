@@ -3,6 +3,7 @@ layout: default
 title: Deutsch - Emojis
 navcategory: deutsch
 canreveal: true
+canreload: true
 ---
 
 ## Emojis
@@ -117,9 +118,19 @@ Male Symbol &#9794;
 */
     ];
 
-    var already = new Array();
+    document.write("<div id=\"vTable\"></div>");
 
-    document.write("<table class=\"emoji\">");
+function init() {
+    var hash = window.location.hash.substr(1);
+    if (hash === "") {
+        reload();
+    } else {
+        redraw(hash);
+    }
+}
+function reload() {
+    const already = new Array();
+    var hash = "";
     for (let i = 0; i < 7; i++) {
         let a;
         let key;
@@ -127,31 +138,60 @@ Male Symbol &#9794;
             a = Math.floor(Math.random() * data.length);
             key = a;
         } while (already.indexOf(key) != -1);
-
-        document.write("<tr><td class=\"emoji-symbol\">");
-        document.write(data[a][0])
-        document.write("</td><td class=\"emoji-descr\">");
+        hash = hash + a + ",";
 
         const correct_solution = Math.floor(Math.random() * 4);
+        hash = hash + correct_solution + ",";
         const already_solutions = new Array();
         for (let j = 0; j < 4; j++) {
-            if (j === correct_solution) {
-                document.write(" <span class=\"revealHide\"><i class=\"far fa-square\"></i></span><span class=\"reveal\"><i class=\"far fa-check-square\"></i></span> &nbsp;&nbsp;&nbsp; " + data[a][1] + "<br/>");
-            } else {
+            if (j !== correct_solution) {
                 let b;
                 do {
                     b = Math.floor(Math.random() * data.length);
                 } while (already_solutions.indexOf(b) != -1 || b === a);
-                document.write(" <i class=\"far fa-square\"></i> &nbsp;&nbsp;&nbsp; " + data[b][1] + "<br/>");
+                hash = hash + b + ",";
                 already_solutions.push(b);
             }
         }
-        document.write("</td>");
-
-        document.write("</tr>\n");
-        already.push(key);
+        hash = hash.substr(0,hash.length-1) + ":";
     }
-    document.write("</table>");
+    hash = hash.substr(0,hash.length-1);
+
+    window.location.hash = hash;
+    redraw(hash);
+}
+function redraw(hash) {
+    hashElements = hash.split(":");
+
+    let html = "<table class=\"emoji\">";
+    for (let i = 0; i < hashElements.length; i++) {
+        const hashElement = hashElements[i].split(",");
+        let a = parseInt(hashElement[0],10);
+        
+        html += "<tr><td class=\"emoji-symbol\">" + data[a][0] + "</td><td class=\"emoji-descr\">";
+
+        const correct_solution = parseInt(hashElement[1],10);
+        let k = 2;
+        for (let j = 0; j < 4; j++) {
+            if (j === correct_solution) {
+                html += " <span class=\"revealHide\"><i class=\"far fa-square\"></i></span><span class=\"reveal\"><i class=\"far fa-check-square\"></i></span> &nbsp;&nbsp;&nbsp; " + data[a][1] + "<br/>";
+            } else {
+                const b = parseInt(hashElement[k],10);
+                html += " <i class=\"far fa-square\"></i> &nbsp;&nbsp;&nbsp; " + data[b][1] + "<br/>";
+                k = k + 1;
+            }
+        }
+        html += "</td></tr>\n";
+    }
+    html += "</table>";
+
+    const table = document.getElementById("vTable");
+    if (table) {
+        table.innerHTML = html;
+    } else {
+        document.write(html);
+    }
+}
 
 </script><noscript>
     <div class="noscript">
