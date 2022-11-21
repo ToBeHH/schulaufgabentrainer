@@ -14,11 +14,13 @@ canreveal: true
 <script type="text/javascript">
 
     var already = new Array();
+    var key = "";
 
     for (var i = 0; i < 100; i++) {
         do {
             var a = Math.floor(Math.random() * 10) + 1;
             var b = Math.floor(Math.random() * 10) + 1;
+            key = a + ":" + b;
         } while (already.indexOf(key) != -1);
 
         document.write("<div class=\"t\">" + (a * b) + " : " + b + " = <span class=\"revealHide\">_______</span><span class=\"reveal\">" + a + "</span> </div>");
