@@ -797,7 +797,77 @@ const data = [ {
         ] }, // end unit 2 - subsection 3
     ] }, // end unit 2 - orange lint 5
 ] }, // end Orange Line 5
-
+{
+    book: "MSA Test",
+    sections: [ {
+        section: "Written test",
+        subsections: [ {
+            subsection: "Social media",
+            vocabulary: [
+["computer","computer"],
+["tablet","das Tablet"],
+["internet","das Internet"],
+["TV / television","TV Fernsehen"],
+["to be online","online sein"],
+["social media","soziale Medien"],
+["media addiction","Mediensucht"],
+["friend request","Freundschaftsanfrage"],
+["to disconnect","Verbindung trennen"],
+["waste of time","Zeitverschwendung"],
+["movie","Film"],
+["viewer","Zuschauer/in"],
+["news","Nachrichten"],
+["internet access","Internetzugang"],
+["video games","Internetzugang"],
+["player","Spieler"],
+["console","Konsole"],
+["score","Punktestand"],
+["to subscribe to sth","etwas abonnieren"],
+["content","Inhalt"],
+["upload","hochladen"],
+["a user name","Benutzername"],
+["to post something online","posten"],
+["to save","speichern"],
+["to e-mail","eine Email senden"],
+["search engine"," Suchmaschine"],
+["series","Serie"],
+["source of information","Informationsquelle"],
+["to monitor something","etwas überwachen"],
+["blog","der Blog"],
+["influencer","Beeinflusser"],
+["breaking news","Eilmeldung"],
+["invade someone’s privacy","in die Privatsphäre eindringen"],
+["freedom of the press","Pressefreiheit"],
+["be critical of someone","jemandem kritisch gegenüberstehen"],
+["offensive","beleidigend"],
+["racist","rassistisch"],
+["radical hatred","Rassenhass"],
+["disturbing","verstörend"],
+["decent","anständig"],
+["bald language","unanständige Sprache"],
+["get hooked","süchtig werden"],
+["communicate with someone","mit jemanden kommunizieren"],
+["on the internet","im Internet"],
+["anonymous","anonym"],
+["violence","Gewalt"],
+["bombard someone with sth","jemanden mit etwas bombardieren"],
+["promotion","Werbung"],
+["competition","Wettkampf"],
+["netiquette","Regeln im Internet"],
+["harassment","Belästigung"],
+["bullying","Mobbing"],
+["sexting"," Sexting"],
+["feel isolated","sich isoliert fühlen"],
+["anxiety","Angst"],
+["worry","Sorge"],
+["depression","Depression"],
+["distance learning","Fernunterricht"],
+["face to face","von Angesicht zu Angesicht"],
+["device"," Gerät"],
+["mobile phone","Handy"]
+] } // end of subsection
+        ] } // end of section
+    ] } // end of book   
 ];
 
     document.write("<div class=\"noprint\"><select id=\"vocChooser\" onchange=\"reload()\">");
